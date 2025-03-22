@@ -6,7 +6,7 @@ import { Link } from "@remix-run/react";
 
 export default function ProjectsDisplay() {
   const [searchTerm, setSearchTerm] = useState("");
-  const projectContainerStyle = "py-3 px-4 rounded-lg border border-zinc-900 dark:bg-zinc-900";
+  const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
 
   const explicitWords = ["milf","nsfw", "xxx", "porn", "boobs","boob", "butt", "69", "420", "daddy", "thicc", "sussy", "feet", "hot", "sugar daddy", "sex", "dick"];
   const funnyResponses = [
@@ -58,7 +58,7 @@ export default function ProjectsDisplay() {
           {/* Projects Display */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 relative">
             {filteredProjects.map((project, index) => (
-              <div key={index} className={`${projectContainerStyle} relative`}>
+              <Link to={project.link.github} target="blank" key={index} className={`${projectContainerStyle} relative`}>
                 {/* Live Indicator */}
                 {project.isLive && (
                   <>
@@ -67,10 +67,10 @@ export default function ProjectsDisplay() {
                   </>
                 )}
                 <div className="flex justify-between items-center mb-2">
-                  <Link to={project.link.github} target="blank" className="flex items-baseline gap-1 hover:underline decoration-[1.3px] underline-offset-2">
+                  <div className="flex items-baseline gap-1 decoration-[1.3px]">
                     <h2 className="font-semibold text-[17px] md:text-lg">{project.name}</h2>
                     <FaLink className="text-[10px] md:text-[12px]" />
-                  </Link>
+                  </div>
                   <span className="text-xs font-semibold">{project.status}</span>
                 </div>
                 <p className="md:text-sm text-xs dark:text-zinc-400 line-clamp-5">{project.description}</p>
@@ -81,7 +81,7 @@ export default function ProjectsDisplay() {
                     </Badge>
                   ))}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

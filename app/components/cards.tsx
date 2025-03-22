@@ -17,10 +17,24 @@ const certificates = {
         "Machine Learning Intermediate": "https://www.kaggle.com/learn/certification/darklord176/intermediate-machine-learning"
     },
     HackerRank: {
-        "Beginner": "https://www.hackerrank.com/certificates/3688240601e6",
-        "Intermediate": "https://www.hackerrank.com/certificates/df1cb6f3455c"
+        "SQL Beginner": "https://www.hackerrank.com/certificates/3688240601e6",
+        "SQL Intermediate": "https://www.hackerrank.com/certificates/df1cb6f3455c"
     },
 };
+
+const workExperience = [
+    {
+        company: "NSArrows Innovations",
+        role: "Data Science Intern",
+        location: "Pune, Hinjawadi",
+        duration: "2nd July 2024 - 28th September 2024",
+        responsibilities: [
+            "Developed a robust API service (FastAPI) with a user-friendly frontend for efficient data extraction and storage.",
+            "Built a Python pipeline to convert videos to audio, transcribe, translate, and synthesize voice back into the original speaker.",
+            "Implemented a recommendation system leveraging vector databases (MongoDB/Milvus) for semantic search.",
+        ],
+    },
+];
 
 const totalCertifications = Object.values(certificates)
     .flatMap(certs => Object.keys(certs)).length;
@@ -58,8 +72,24 @@ const cardData = [
     },
     {
         title: 'Years Of Experiences',
-        value: '2+',
-        description: <p className="text-yellow-500">Please elaborate you low level experience Mr. Pandagle</p>,
+        value: '?',
+        description: (
+            <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-justify">
+                {workExperience.map((exp, index) => (
+                    <div key={index} className="space-y-1">
+                        <p>
+                            <strong className="text-green-500">{exp.role}</strong> at <strong className="text-blue-500">{exp.company}</strong>
+                        </p>
+                        <p className="text-sm text-gray-500">{exp.location} | {exp.duration}</p>
+                        <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300">
+                            {exp.responsibilities.map((task, i) => (
+                                <li key={i}>{task}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        ),
     },
     {
         title: 'Projects Completed',
@@ -82,11 +112,11 @@ const cardData = [
             <div className="space-y-4 text-justify text-xs md:text-base">
                 {Object.entries(certificates).map(([platform, certs]) => (
                     <div key={platform}>
-                        <h3 className="md:text-lg text-base font-semibold text-blue-500">{platform}</h3>
+                        <h3 className="md:text-lg text-base font-semibold text-blue-500 dark:text-blue-400">{platform}</h3>
                         <ul className="text-gray-700 dark:text-gray-300">
                             {Object.entries(certs).map(([title, link]) => (
                                 <li key={title}>
-                                    <a href={link} target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:underline">
+                                    <a href={link} target="_blank" rel="noopener noreferrer" className="text-purple-500 dark:text-purple-400 hover:underline">
                                         {title}
                                     </a>
                                 </li>
@@ -105,7 +135,7 @@ export default function Cards() {
             {cardData.map((card) => (
                 <Dialog key={card.title}>
                     <DialogTrigger asChild>
-                        <div className="hover:scale-105 duration-150 flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-900 border border-zinc-950 rounded-md p-3 w-full text-center cursor-pointer">
+                        <div className="dark:hover:border-zinc-600 hover:shadow-md hover:shadow-zinc-500 duration-150 flex flex-col items-center justify-center border dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none shadow-sm shadow-zinc-600 rounded-md p-3 w-full text-center cursor-pointer">
                             <h2 className="md:text-xl text-[20px] font-bold text-gray-800 dark:text-white">{card.value}</h2>
                             <p className="md:text-xs text-[10px] text-gray-600 dark:text-white/60 font-semibold">{card.title}</p>
                         </div>

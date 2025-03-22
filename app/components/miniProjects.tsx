@@ -4,13 +4,13 @@ import { FaLink } from "react-icons/fa";
 import { Link } from "@remix-run/react";
 
 // eslint-disable-next-line react/prop-types
-export default function MiniProjects({ limit = 6 }) {
-    const projectContainerStyle = "py-3 px-4 rounded-lg border border-zinc-900 dark:bg-zinc-900 bg-zinc-50";
+export default function MiniProjects({ limit = 3 }) {
+    const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
     const featuredProjects = SomeProjects.filter(project => project.featured).slice(0, limit);
 
     return (
         <div className="md:mx-6 mx-3">
-            <div className="flex items-center gap-2 md:gap-4 my-6 mx-1">
+            <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
                 <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
                 <div className="text-center">
                     <h1 className="text-lg md:text-2xl font-semibold">Featured Projects!</h1>
@@ -24,7 +24,7 @@ export default function MiniProjects({ limit = 6 }) {
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 relative">
                 {featuredProjects.map((project, index) => (
-                    <div key={index} className={`${projectContainerStyle} relative`}>
+                    <Link to={project.link.github} target="_blank" key={index} className={`${projectContainerStyle} relative`} rel="noreferrer">
                         {project.isLive && (
                             <>
                                 <span className="absolute top-[-5px] right-[-5px] h-3 w-3 rounded-full bg-zinc-900 animate-ping dark:bg-zinc-200"></span>
@@ -33,10 +33,10 @@ export default function MiniProjects({ limit = 6 }) {
                         )}
 
                         <div className="flex justify-between items-center mb-2">
-                            <Link to={project.link.github} className="flex items-baseline gap-1 hover:underline decoration-[1.3px] underline-offset-2">
+                            <div className="flex items-baseline gap-1 decoration-[1.3px]">
                                 <h2 className="font-semibold text-[17px] md:text-lg">{project.name}</h2>
                                 <FaLink className="text-[10px] md:text-[12px]" />
-                            </Link>
+                            </div>
                             <span className="text-xs font-semibold">{project.status}</span>
                         </div>
 
@@ -48,7 +48,7 @@ export default function MiniProjects({ limit = 6 }) {
                                 </Badge>
                             ))}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

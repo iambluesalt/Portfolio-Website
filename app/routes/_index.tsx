@@ -3,6 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import Cards from "~/components/cards";
 import Hero from "~/components/Hero";
 import MiniAbout from "~/components/miniAbout";
+import MiniHobbies from "~/components/miniHobbies";
 import MiniProjects from "~/components/miniProjects";
 import MiniSkills from "~/components/miniSkills";
 import Transition from "~/components/transition";
@@ -22,6 +23,7 @@ export default function Index() {
       <MiniAbout />
       <MiniProjects />
       <MiniSkills />
+      <MiniHobbies />
     </Transition>
   );
 }
