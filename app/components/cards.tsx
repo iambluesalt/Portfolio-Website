@@ -63,8 +63,8 @@ const cardData = [
         value: '?',
         description: (
             <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-center">
-                
                 <FaQuestionCircle className="text-6xl mx-auto" />
+                <p>Nothing here</p>
             </div>
         ),
     },

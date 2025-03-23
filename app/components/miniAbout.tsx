@@ -1,16 +1,7 @@
 import { useState } from "react";
-import { FlipWords } from "./ui/flip-words"; // Importing FlipWords
 
 export default function MiniAbout() {
     const [isHovered, setIsHovered] = useState(false);
-
-    // Aliases for flipping effect
-    const aliases = [
-        " Scorpo",
-        " Bluesalt",
-        " Aaditya",
-        " Aadi / Aadya",
-    ];
 
     return (
         <div className="mx-3 md:mx-6 pt-2 cursor-default relative">
@@ -41,10 +32,6 @@ export default function MiniAbout() {
                             I <span className="font-semibold">sketch human anatomy</span> purely for <span className="italic font-semibold">artistic</span> reasons ⚆ _ ⚆ of course, and occasionally <span className="font-semibold">compose lofi and orchestral tracks</span> because my brain refuses to stick to one obsession.
                             When I’m not busy breaking my own code, I’m either drowning in music or pretending to be intellectual by reading books.
                             I workout so my brain doesn&apos;t completely collapse from the crimes I commit against logic and clean code.
-                            If you&apos;re feeling formal, use my name. If not, well... there&apos;s always 
-                            <span className="text-blue-500 dark:text-green-400">
-                                <FlipWords words={aliases} />
-                            </span>
                         </p>
                     </div>
                 </div>

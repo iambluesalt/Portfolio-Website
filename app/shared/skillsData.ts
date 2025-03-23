@@ -9,6 +9,7 @@ export const skillsDataObj = [
     { name: "MongoDB", src: "/mongodb.svg", category: "full-stack" },
     { name: "Tailwind", src: "/tailwind.svg", category: "full-stack" },
     { name: "Vercel", src: "/vercel.svg", category: "full-stack" },
+    { name: "Prisma", src: "/prisma.svg", category: "full-stack" },
 
     // Generative AI
     // { name: "Gemini", src: "/gemini.svg", category: "generative-ai" },
