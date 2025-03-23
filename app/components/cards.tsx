@@ -1,6 +1,7 @@
 import { SomeProjects } from "~/shared/projectsData";
 import { DialogTrigger, Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Link } from "@remix-run/react";
+import { FaQuestionCircle } from "react-icons/fa";
 
 const birthYear = 2003;
 const currentYear = new Date().getFullYear();
@@ -22,19 +23,6 @@ const certificates = {
     },
 };
 
-const workExperience = [
-    {
-        company: "NSArrows Innovations",
-        role: "Data Science Intern",
-        location: "Pune, Hinjawadi",
-        duration: "2nd July 2024 - 28th September 2024",
-        responsibilities: [
-            "Developed a robust API service (FastAPI) with a user-friendly frontend for efficient data extraction and storage.",
-            "Built a Python pipeline to convert videos to audio, transcribe, translate, and synthesize voice back into the original speaker.",
-            "Implemented a recommendation system leveraging vector databases (MongoDB/Milvus) for semantic search.",
-        ],
-    },
-];
 
 const totalCertifications = Object.values(certificates)
     .flatMap(certs => Object.keys(certs)).length;
@@ -74,20 +62,9 @@ const cardData = [
         title: 'Years Of Experiences',
         value: '?',
         description: (
-            <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-justify">
-                {workExperience.map((exp, index) => (
-                    <div key={index} className="space-y-1">
-                        <p>
-                            <strong className="text-green-500">{exp.role}</strong> at <strong className="text-blue-500">{exp.company}</strong>
-                        </p>
-                        <p className="text-sm text-gray-500">{exp.location} | {exp.duration}</p>
-                        <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300">
-                            {exp.responsibilities.map((task, i) => (
-                                <li key={i}>{task}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+            <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-center">
+                
+                <FaQuestionCircle className="text-6xl mx-auto" />
             </div>
         ),
     },

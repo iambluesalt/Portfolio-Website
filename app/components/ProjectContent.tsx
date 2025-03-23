@@ -43,7 +43,7 @@ export default function ProjectsDisplay() {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="text-xs md:text-sm w-full p-2 border rounded-md bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 outline-none"
+          className="text-xs md:text-sm w-full p-2 border rounded-md bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-200 outline-none"
           placeholder="Search projects by name, description, or tags..."
         />
       </div>

@@ -7,7 +7,7 @@ export default function MiniAbout() {
         <div className="mx-3 md:mx-6 pt-2 cursor-default">
             <div className="flex gap-4">
                 <img
-                    src="/dog_piano.jpg"
+                    src="/github.jpg"
                     alt="Aaditya Pandagle"
                     className="rounded-lg md:w-2/5 hidden lg:block h-[210px] object-cover"
                 />

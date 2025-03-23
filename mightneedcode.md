@@ -106,3 +106,20 @@ A tech enthusiast hailing{" "}
                         Checkout my CV
                     </button>
                 </a>
+
+<!-- In cards -->
+```tsx
+{/* {workExperience.map((exp, index) => (
+                    <div key={index} className="space-y-1">
+                        <p>
+                            <strong className="text-green-500">{exp.role}</strong> at <strong className="text-blue-500">{exp.company}</strong>
+                        </p>
+                        <p className="text-sm text-gray-500">{exp.location} | {exp.duration}</p>
+                        <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300">
+                            {exp.responsibilities.map((task, i) => (
+                                <li key={i}>{task}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))} */}
+```
