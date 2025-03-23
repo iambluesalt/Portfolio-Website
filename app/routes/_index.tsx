@@ -27,7 +27,7 @@ export default function Index() {
       <MiniHobbies />
       <div className="md:mx-6 mx-3 mt-4 cursor-default">
         {/* Divider with Title */}
-        <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
+        <div className="flex items-center gap-2 md:gap-4 my-4 mx-1">
           <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
           <div className="text-center">
             <h1 className="text-lg md:text-2xl font-semibold">No Contact Form? Tragic.</h1>
