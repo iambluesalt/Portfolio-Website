@@ -25,7 +25,8 @@ export default function Index() {
       <MiniProjects />
       <MiniSkills />
       <MiniHobbies />
-      <div className="md:mx-6 mx-3 mt-4 cursor-default">
+
+      <div className="md:mx-6 mx-3 my-7 cursor-default">
         {/* Divider with Title */}
         <div className="flex items-center gap-2 md:gap-4 my-4 mx-1">
           <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
@@ -48,11 +49,16 @@ export default function Index() {
             <span className="text-yellow-400 font-semibold"> overpriced third-party service </span>
             just so bots can flood my inbox with ‘business opportunities.’ Yeah, no.
             <span className="text-green-400 font-semibold"> Just DM me like a normal human.</span>
+            But if you insist on being all professional about it, fine—here’s my email:
+            <a 
+              href="mailto:adi.pandagle@gmail.com" 
+              className="text-blue-400 font-semibold hover:underline ml-1"
+            >
+              adi.pandagle@gmail.com
+            </a>.
           </p>
         </div>
       </div>
     </Transition>
   );
 }
-
-

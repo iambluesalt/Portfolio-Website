@@ -16,7 +16,7 @@ export default function MiniProjects({ limit = 3 }) {
                     <h1 className="text-lg md:text-2xl font-semibold">Featured Projects!</h1>
                     <Link to="/projects" className="md:text-[13px] text-[10px]">
                         <p className="hover:underline hover:underline-offset-2 dark:text-zinc-400">
-                            Check out the entire list of projects
+                            Click here to view entire list of projects
                         </p>
                     </Link>
                 </div>
