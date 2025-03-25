@@ -75,7 +75,7 @@ export default function MiniHobbies() {
             <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
                 <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
                 <div className="text-center">
-                    <h1 className="text-lg md:text-2xl font-semibold">Let’s Merge (No Conflicts, Hopefully)</h1>
+                    <h1 className="text-lg md:text-xl font-semibold">Let’s Merge (No Conflicts, Hopefully)</h1>
                     <p className="md:text-[13px] text-[10px] dark:text-zinc-400">
                     Just two chaotic minds committing to something questionable.
                     </p>
@@ -94,7 +94,7 @@ export default function MiniHobbies() {
                             rel="noopener noreferrer"
                             className=" dark:border dark:hover:border-zinc-600 border-zinc-200 p-4 dark:border-zinc-900 rounded-md shadow-sm dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 shadow-zinc-500 duration-150 dark:shadow-none relative overflow-hidden"
                         >
-                            <h2 className="font-semibold md:text-lg text-base">{account.name}</h2>
+                            <h2 className="font-semibold md:text-lg text-base mb-2">{account.name}</h2>
                             <p className="md:text-sm text-xs text-gray-700 dark:text-gray-300 mr-20">{account.description}</p>
 
                             {/* Background Icon with Conditional Flip */}

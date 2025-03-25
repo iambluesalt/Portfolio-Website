@@ -6,7 +6,7 @@ const MiniSkills = () => {
             <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
                 <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
                 <div className="text-center">
-                    <h1 className="text-lg md:text-2xl font-semibold">Technical Skills</h1>
+                    <h1 className="text-lg md:text-xl font-semibold">Technical Skills</h1>
                     <p className="md:text-[13px] text-[10px] dark:text-zinc-400">
                         Somethings I&apos;m good at
                     </p>

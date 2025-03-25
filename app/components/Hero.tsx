@@ -19,9 +19,13 @@ export default function Hero() {
 
     const roles4mob = [
         "Data Scientist",
+        "Full Stack Dev.",
+        "Deep Learning Eng.",
         "AI/MLOps Eng.",
         "Potato Debugger",
+        "Memory Leak Bandit",
         "Script Junkie",
+        "Full-Stack Dev.",
         "Runtime Wrecker",
         "Git Grimlin",
     ];
