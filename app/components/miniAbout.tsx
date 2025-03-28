@@ -11,7 +11,7 @@ export default function MiniAbout() {
                     alt="Aaditya Pandagle"
                     className="rounded-lg md:w-2/5 hidden lg:block h-[210px] object-cover"
                 />
-                <div className="md:text-justify text-xs md:text-sm text-justify dark:bg-zinc-900 duration-150 border dark:border-zinc-900 dark:shadow-none shadow-sm shadow-zinc-500 py-3 px-4 rounded-lg lg:w-3/5">
+                <div className="md:text-justify text-xs md:text-sm text-justify dark:bg-zinc-900 duration-150 border border-zinc-100 dark:border-zinc-900 dark:shadow-none shadow-sm shadow-zinc-500 py-3 px-4 rounded-lg lg:w-3/5">
                     <div className="mb-2">
                         {/* About Me Title and Emoji */}
                         <div className="text-xl md:text-2xl font-semibold mb-2 flex items-center gap-1">

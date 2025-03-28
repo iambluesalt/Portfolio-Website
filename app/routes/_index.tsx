@@ -37,23 +37,20 @@ export default function Index() {
         </div>
 
         {/* Content Card */}
-        <div className="flex items-center gap-4 p-4 dark:bg-zinc-900 rounded-xl shadow-sm hover:shadow-md hover:shadow-zinc-500 shadow-zinc-500 dark:shadow-none border dark:border-zinc-900 dark:hover:border-zinc-500 duration-150">
+        <div className="flex items-center gap-4 p-4 dark:bg-zinc-900 rounded-xl shadow-sm shadow-zinc-500 dark:shadow-none border dark:border-zinc-900 dark:hover:border-zinc-500 duration-150">
           {/* Leftmost Alert Icon */}
           <IoIosAlert className="hidden md:block text-red-500 text-3xl md:text-7xl flex-shrink-0" />
 
           {/* Text Content */}
           <p className="text-sm md:text-base leading-relaxed">
-            <span className="text-red-400 font-semibold">Too lazy</span> to set up a contact form.
+            <span className="text-red-500 font-semibold">Too lazy</span> to set up a contact form.
             First, I&apos;d have to deal with backend nightmares, API keys, spam filters, and email servers
             that ghost harder than my ex. Then, I’d have to pay for some
-            <span className="text-yellow-400 font-semibold"> overpriced third-party service </span>
+            <span className="text-yellow-500 font-semibold"> overpriced third-party service </span>
             just so bots can flood my inbox with ‘business opportunities.’ Yeah, no.
-            <span className="text-green-400 font-semibold"> Just DM me like a normal human.</span>
+            <span className="text-green-500 font-semibold"> Just DM me like a normal human.</span>
             But if you insist on being all professional about it, fine—here’s my email:
-            <a 
-              href="mailto:adi.pandagle@gmail.com" 
-              className="text-blue-400 font-semibold hover:underline ml-1"
-            >
+            <a href="mailto:adi.pandagle@gmail.com" className="text-blue-500 font-semibold hover:underline ml-1">
               adi.pandagle@gmail.com
             </a>.
           </p>

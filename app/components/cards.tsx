@@ -108,7 +108,7 @@ const cardData = [
 
 export default function Cards() {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 md:px-6 px-3 py-2">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-4 border-zinc-100 gap-2 md:px-6 px-3 py-2">
             {cardData.map((card) => (
                 <Dialog key={card.title}>
                     <DialogTrigger asChild>

@@ -19,7 +19,7 @@ export default function NavBar() {
   return (
     <div className="flex flex-row justify-between items-center md:px-3 py-2 mx-3 uppercase">
       <Link to="/" className="flex flex-row gap-1 md:gap-2 items-center">
-        <div className="md:text-md font-semibold px-4 py-1 border shadow-sm hover:shadow-md hover:shadow-zinc-500 shadow-zinc-500 dark:shadow-none dark:hover:border-zinc-600 dark:border-zinc-900 duration-150 dark:bg-zinc-900 rounded-md">BlueSalt</div>
+        <div className="md:text-md font-semibold px-4 py-1 border shadow-sm shadow-zinc-500 dark:shadow-none dark:hover:border-zinc-600 dark:border-zinc-900 duration-150 dark:bg-zinc-900 rounded-md">BlueSalt</div>
       </Link>
 
       {/* Desktop Navigation Links */}

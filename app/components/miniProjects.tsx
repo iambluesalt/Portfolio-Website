@@ -5,7 +5,7 @@ import { Link } from "@remix-run/react";
 
 // eslint-disable-next-line react/prop-types
 export default function MiniProjects({ limit = 3 }) {
-    const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
+    const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border border-zinc-100 shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
     const featuredProjects = SomeProjects.filter(project => project.featured).slice(0, limit);
 
     return (
