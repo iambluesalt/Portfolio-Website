@@ -10,11 +10,11 @@ export default function MiniProjects({ limit = 3 }) {
 
     return (
         <div className="md:mx-6 mx-3">
-            <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
+            <div className="flex items-center gap-3 md:gap-4 my-8 mx-1">
                 <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
                 <div className="text-center">
                     <h1 className="text-lg md:text-xl font-semibold">Featured Projects!</h1>
-                    <Link to="/projects" className="md:text-[13px] text-[10px]">
+                    <Link to="/projects" className="text-[12px]">
                         <p className="hover:underline hover:underline-offset-2 dark:text-zinc-400">
                             Click me to view all
                         </p>

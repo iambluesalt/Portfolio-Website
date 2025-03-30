@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 export default function MiniAbout() {
-    const [isHovered, setIsHovered] = useState(false);
-
     return (
-        <div className="mx-3 md:mx-6 pt-2 cursor-default relative">
+        <div className="mx-3 md:mx-6 md:pt-2 cursor-default relative">
             <div className="flex gap-4">
                 <img
                     src="/github.jpg"
@@ -16,13 +12,6 @@ export default function MiniAbout() {
                         {/* About Me Title and Emoji */}
                         <div className="text-xl md:text-2xl font-semibold mb-2 flex items-center gap-1">
                             <span>About me</span>
-                            <span
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                                className="text-3xl"
-                            >
-                                {isHovered ? "😄" : "😃"}
-                            </span>
                         </div>
 
                         {/* About Me Text with Blended Aliases */}

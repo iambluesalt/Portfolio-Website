@@ -113,8 +113,8 @@ export default function Cards() {
                 <Dialog key={card.title}>
                     <DialogTrigger asChild>
                         <div className="dark:hover:border-zinc-600 hover:shadow-md hover:shadow-zinc-500 duration-150 flex flex-col items-center justify-center border dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none shadow-sm shadow-zinc-600 rounded-md p-3 w-full text-center cursor-pointer">
-                            <h2 className="md:text-xl text-[20px] font-bold text-gray-800 dark:text-white">{card.value}</h2>
-                            <p className="md:text-xs text-[10px] text-gray-600 dark:text-white/60 font-semibold">{card.title}</p>
+                            <h2 className="md:text-xl text-[17px] font-bold text-gray-800 dark:text-white">{card.value}</h2>
+                            <p className="md:text-xs text-[11px] text-gray-600 dark:text-white/60 font-semibold">{card.title}</p>
                         </div>
                     </DialogTrigger>
                     <DialogContent>
