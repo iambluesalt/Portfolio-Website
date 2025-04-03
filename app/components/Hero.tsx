@@ -63,7 +63,7 @@ export default function Hero() {
                     A <span className="font-semibold text-purple-400">Full-Stack Data Scientist</span> who spends most of my time buried in code, bouncing between projects, and constantly learning something new while letting others collect digital dust 😬. From building full-stack solutions to diving deep into AI, I thrive into breaking things just to make them work even better. 🚀
                 </p>
                 <IoLogoOctocat className="rotate-12 absolute top-[-10px] right-[-8px] text-[105px] opacity-30 dark:opacity-15" />
-                <IoLogoOctocat className="-rotate-[18deg] absolute top-[15px] right-[100px] text-[60px] opacity-30 dark:opacity-15" />
+                <IoLogoOctocat className="-rotate-[18deg] absolute top-[15px] right-[100px] text-[60px] opacity-0 md:opacity-30 md:dark:opacity-15" />
             </div>
 
             
