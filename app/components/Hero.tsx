@@ -15,7 +15,8 @@ export default function Hero() {
         "Full Stack Data Scientist",
         "Memory Leak Bandit, lol",
         "Git Grimlin",
-        "Full-Stack Developer"
+        "Full-Stack Developer",
+        "Generative AI Developer",
     ];
 
     const roles4mob = [
@@ -28,6 +29,7 @@ export default function Hero() {
         "Full-Stack Dev.",
         "Runtime Wrecker",
         "Git Grimlin",
+        "Generative AI Dev.",
     ];
 
     const [roles, setRoles] = useState(roles4pc);
@@ -50,7 +52,7 @@ export default function Hero() {
 
     return (
         <div className="md:flex mx-3 md:mx-6 gap-4 md:pb-2 h-full cursor-default">
-            <div className="relative overflow-hidden duration-150 border border-zinc-100 dark:border-zinc-900 dark:shadow-none shadow-sm shadow-zinc-500 rounded-md dark:bg-zinc-900 px-4 md:px-5 py-3 pb-4 lg:w-3/5">
+            <div className="relative overflow-hidden duration-150 border border-zinc-100 dark:border-zinc-900 dark:shadow-none shadow-sm shadow-zinc-500 rounded-md dark:bg-zinc-900 px-4 md:px-5 py-3 pb-4 lg:w-[75%]">
                 <h2 className="md:tracking-normal tracking-tighter text-[13px] md:text-[16px]">Hello <span className="md:text-2xl text-lg">👋</span>, I&apos;m{" "}
                     <span className="font-semibold md:text-[26px] text-xl px-1">Aaditya Pandagle.</span> A part-time human,{" "}
                 </h2>
@@ -60,18 +62,17 @@ export default function Hero() {
                     </span>
                 </h2>
                 <p className=" md:text-base text-[13px] md:pt-5 pt-3 tracking-normal">
-                    A <span className="font-semibold text-purple-400">Full-Stack Data Scientist</span> who spends most of my time buried in code, bouncing between projects, and constantly learning something new while letting others collect digital dust 😬. From building full-stack solutions to diving deep into AI, I thrive into breaking things just to make them work even better. 🚀
+                    A <span className="font-semibold text-purple-400">tech enthusiast</span> who spends most of my time buried in code, bouncing between projects, and constantly learning something new while letting others collect digital dust 😬. From building full-stack solutions to diving deep into AI, I thrive into breaking things just to make them work even better. 🚀
                 </p>
                 <IoLogoOctocat className="rotate-12 absolute top-[-10px] right-[-8px] text-[105px] opacity-30 dark:opacity-15" />
                 <IoLogoOctocat className="-rotate-[18deg] absolute top-[15px] right-[100px] text-[60px] opacity-0 md:opacity-30 md:dark:opacity-15" />
             </div>
 
-            
             <img
-                src="/dog_piano.jpg"
+                src="/kitty-transparent.gif"
                 alt="Aaditya Pandagle"
                 // className="rounded-lg md:w-2/5 hidden lg:block h-[215px] object-cover scale-x-[-1]"
-                className="rounded-md md:w-2/5 hidden md:h-[220px] lg:block object-cover scale-x-[-1]"
+                className="rounded-md hidden lg:block object-fill scale-x-[-1]"
             />
         </div>
     );
