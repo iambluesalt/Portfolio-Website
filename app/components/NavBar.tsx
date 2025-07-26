@@ -8,6 +8,7 @@ import {
 import { Button } from "~/components/ui/button";
 import DarkModeToggler from "~/components/dark-mode-toggler";
 import { FiFileText } from "react-icons/fi";
+import { useState } from "react";
 
 const navLinks = [
   { href: "/", name: "Home" },
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false)
   return (
     <div className="flex flex-row justify-between items-center md:px-3 py-2 mx-3 uppercase">
       <Link to="/" className="flex flex-row gap-1 md:gap-2 items-center">
@@ -36,7 +38,7 @@ export default function NavBar() {
       {/* Mobile Drawer Menu */}
       <div className="flex items-center md:gap-3 gap-2">
         <div className="md:hidden">
-          <Drawer>
+          <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
               <button className="flex items-center text-2xl shadow-sm hover:shadow-zinc-400 dark:shadow-none hover:shadow-md shadow-zinc-400 dark:bg-zinc-900 p-1 rounded-md dark:hover:bg-zinc-800 duration-150">
                 <IoMenu />
@@ -47,7 +49,7 @@ export default function NavBar() {
                 <div className="p-4">
                   <div className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
-                      <Link key={link.href} to={link.href}>
+                      <Link key={link.href} to={link.href} onClick={() => setOpen(false)}>
                         <Button variant="ghost" className="w-full text-left font-semibold uppercase text-xs">
                           {link.name}
                         </Button>

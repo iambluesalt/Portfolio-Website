@@ -1,7 +1,7 @@
 import { SomeProjects } from "~/shared/projectsData";
 import { DialogTrigger, Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Link } from "@remix-run/react";
-import { FaQuestionCircle } from "react-icons/fa";
+import { FaUserSecret } from "react-icons/fa6";
 
 const birthYear = 2003;
 const currentYear = new Date().getFullYear();
@@ -63,8 +63,8 @@ const cardData = [
         value: '?',
         description: (
             <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-center">
-                <FaQuestionCircle className="text-6xl mx-auto" />
-                <p>Nothing here</p>
+                <FaUserSecret className="text-6xl mx-auto" />
+                <p>Shhhhhhhhh...It&apos;s a secret</p>
             </div>
         ),
     },
