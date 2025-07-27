@@ -25,7 +25,7 @@ export default function NavBar() {
       </Link>
 
       {/* Desktop Navigation Links */}
-      {/* <div className="hidden md:flex flex-row gap-0">
+      <div className="hidden md:flex flex-row gap-0">
         {navLinks.map((link) => (
           <Link key={link.href} to={link.href}>
             <Button variant="ghost" className="font-semibold text-[11px] uppercase">
@@ -33,7 +33,7 @@ export default function NavBar() {
             </Button>
           </Link>
         ))}
-      </div> */}
+      </div>
 
       {/* Mobile Drawer Menu */}
       <div className="flex items-center md:gap-3 gap-2">

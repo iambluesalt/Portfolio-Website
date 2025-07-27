@@ -4,12 +4,16 @@ export default function Blogs() {
   return (
     <Transition>
       <div className="mx-3 md:mx-6 min-h-screen flex items-center justify-center">
-        {/* Mobile: Show WIP */}
-        <div className="block lg:hidden text-3xl font-bold text-center text-gray-500">
-          🚧 WIP 🚧
+        {/* Mobile: Only show Minecraft.gif */}
+        <div className="block lg:hidden">
+          <img
+            src="/minecraft.gif"
+            alt="Aaditya Pandagle"
+            className="rounded-md object-cover mx-auto"
+          />
         </div>
 
-        {/* Desktop: Show GIFs */}
+        {/* Desktop: Show all GIFs */}
         <div className="hidden lg:flex flex-row items-center space-x-4">
           <img
             src="/bee-minecraft.gif"
