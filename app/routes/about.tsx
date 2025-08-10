@@ -43,7 +43,7 @@ const profile = {
 export default profile;`;
 
   return (
-    <div className="relative w-full rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/60 dark:bg-zinc-900/40 backdrop-blur-md overflow-hidden shadow-md ring-1 ring-black/5 dark:ring-white/5">
+  <div className="relative w-full rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/60 dark:bg-zinc-900/40 overflow-hidden shadow-md ring-1 ring-black/5 dark:ring-white/5">
       <div className="flex items-center gap-1 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 bg-gradient-to-r from-zinc-200/70 to-zinc-100/30 dark:from-zinc-800/40 dark:to-zinc-900/10">
         <span className="size-2 rounded-full bg-red-400" />
         <span className="size-2 rounded-full bg-amber-400" />
@@ -67,11 +67,11 @@ export default function AboutRoute() {
     <div className="relative min-h-screen flex flex-col dark:bg-zinc-950 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-60 bg-[radial-gradient(circle_at_30%_30%,rgba(100,116,139,0.25),transparent_60%),radial-gradient(circle_at_75%_70%,rgba(161,161,170,0.25),transparent_60%)]" />
       <Transition>
-        <main className="w-full px-4 sm:px-6 md:px-8 pt-28 md:pt-32 pb-24 mx-auto max-w-7xl space-y-20">
+        <main className="w-full px-6 md:px-8 pt-28 md:pt-32 pb-24 mx-auto max-w-7xl space-y-20">
           <div className="grid md:grid-cols-2 gap-10 items-start">
-            <div className="space-y-8 text-[15px] md:text-[16px] text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
+            <div className="space-y-8 text-[13px] md:text-[15px] text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
               <SectionHeading>About Me</SectionHeading>
-              <p className="mb-4 indent-6 first-letter:text-2xl first-letter:font-bold first-letter:text-emerald-400">
+              <p className="mb-4 first-letter:text-2xl">
                 Born in Mumbai in 2002, I migrated to Pune in 2006 and have been here ever since—collecting life experiences, bad report cards, and eventually some good ones. High school? <span className="font-semibold text-emerald-400">69%</span> (heh… nice). Secondary high school? <span className="font-semibold text-emerald-400">55.69%</span> (not my proudest, but hey, character development arc). I made up for it in my BCA degree with an <span className="font-semibold text-emerald-400">8.68 CGPA</span> and a couple of chess tournament wins for extra bragging rights. To top it off, I completed a Post-Graduation in Data Science & Analytics—because apparently I enjoy a good academic challenge (and by “challenge” I mean “self-inflicted pain”).
               </p>
               <p className="mb-4 indent-6">

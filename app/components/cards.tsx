@@ -86,7 +86,7 @@ const cardData = [
             <div className="space-y-5 text-sm">
                 {Object.entries(certificates).map(([platform, certs]) => (
                     <div key={platform} className="space-y-1">
-                        <h3 className="font-semibold text-emerald-500">{platform}</h3>
+                        <h3 className="font-heading font-semibold text-emerald-500">{platform}</h3>
                         <ul className="list-disc list-inside space-y-1">
                             {Object.entries(certs).map(([title, link]) => (
                                 <li key={title}>
@@ -109,8 +109,8 @@ export default function Cards() {
             {cardData.map((card) => (
                 <Dialog key={card.title}>
                     <DialogTrigger asChild>
-                        <div className="group relative flex flex-col items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur p-4 sm:p-5 text-center cursor-pointer shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition hover:shadow-md">
-                            <h2 className="md:text-xl text-lg font-semibold text-zinc-900 dark:text-zinc-50 tracking-tight">{card.value}</h2>
+                        <div className="group relative flex flex-col items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 p-4 sm:p-5 text-center cursor-pointer shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition hover:shadow-md">
+                            <h2 className="font-heading md:text-xl text-lg font-semibold text-zinc-900 dark:text-zinc-50 tracking-tight">{card.value}</h2>
                             <p className="mt-1 text-[11px] md:text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400 font-medium">{card.title}</p>
                             {/* Removed hover gradient overlay */}
                         </div>

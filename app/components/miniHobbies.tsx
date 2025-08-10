@@ -80,11 +80,11 @@ export default function MiniHobbies() {
                             href={account.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative overflow-hidden rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur p-5 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-md transition"
+                            className="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200"
                         >
-                            <h2 className="font-semibold text-base md:text-lg mb-2 tracking-tight">{account.name}</h2>
-                            <p className="md:text-sm text-xs text-zinc-600 dark:text-zinc-300 pr-6 leading-relaxed line-clamp-5">{account.description}</p>
-                            <LogoIcon className={`-rotate-12 absolute bottom-[-18px] right-[-16px] text-[120px] opacity-20 dark:opacity-10 pointer-events-none transition-transform ${account.needsFlip ? "scale-x-[-1]" : ""}`} />
+                            <h2 className="font-heading font-semibold text-base md:text-lg mb-2 tracking-tight text-zinc-800 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{account.name}</h2>
+                            <p className="md:text-sm text-xs text-zinc-600 dark:text-zinc-300 pr-6 leading-relaxed line-clamp-5 mb-3">{account.description}</p>
+                            <LogoIcon className={`-rotate-12 absolute bottom-[-18px] right-[-16px] text-[110px] md:text-[120px] opacity-15 dark:opacity-10 pointer-events-none transition-transform duration-300 group-hover:scale-110 group-hover:opacity-25 ${account.needsFlip ? "scale-x-[-1]" : ""}`} />
                         </a>
                     );
                 })}

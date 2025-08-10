@@ -45,16 +45,19 @@ export default function Hero() {
     return (
         <section className="relative grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 relative">
-                <h1 className="text-2xl font-semibold tracking-tight leading-[1.08] mb-0">
+                <h1 className="font-heading text-3xl md:text-4xl font-semibold tracking-tight leading-[1.08] mb-0">
                     Hello <span className="inline-block">👋</span> I&apos;m {" "}
-                    <span className="text-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(16,185,129,0.25)]">
+                    <span className="font-display text-3xl md:text-4xl bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(16,185,129,0.25)]">
                         Aaditya Pandagle
                     </span>
                 </h1>
-                <h2 className="text-base text-zinc-700 dark:text-zinc-300 mb-5">A part-time human and a full-time <span className="font-semibold">
-                    <FlipWords words={roles} className="text-zinc-900 dark:text-zinc-100 md:text-2xl text-xl" />
-                </span></h2>
-                <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-2xl">
+                <h2 className="font-heading text-base md:text-lg text-zinc-700 dark:text-zinc-300 mb-5 flex flex-col md:flex-row md:items-center gap-2 text-left">
+                    <span className="text-left w-full md:w-auto">A part-time human and a full-time</span>
+                    <span className="font-semibold w-full md:w-auto flex justify-start md:justify-normal md:inline-block">
+                        <FlipWords words={roles} className="font-display text-zinc-900 dark:text-zinc-100 text-xl md:text-2xl" />
+                    </span>
+                </h2>
+                <p className="font-sans text-sm md:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-2xl">
                     A {" "}
                     <span className="font-semibold bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 bg-clip-text text-transparent">
                         tech enthusiast

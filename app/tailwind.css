@@ -75,3 +75,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+  /* Typography helpers */
+  @layer utilities {
+    .font-heading { @apply tracking-tight; }
+    .prose h1, .prose h2, .prose h3, .prose h4 { @apply font-heading font-semibold; }
+    .prose code, code { @apply font-mono text-emerald-600 dark:text-emerald-400; }
+    .prose strong { @apply font-semibold text-zinc-900 dark:text-zinc-100; }
+  }

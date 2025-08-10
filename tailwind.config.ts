@@ -18,6 +18,30 @@ export default {
   				'Noto Color Emoji'
   			],
 			comfortaa: ['Comfortaa', 'cursive'],
+			heading: [
+				'Poppins',
+				'Inter',
+				'system-ui',
+				'sans-serif'
+			],
+			display: [
+				'Space Grotesk',
+				'Poppins',
+				'Inter',
+				'system-ui',
+				'sans-serif'
+			],
+			mono: [
+				'Fira Code',
+				'ui-monospace',
+				'SFMono-Regular',
+				'Menlo',
+				'Monaco',
+				'Consolas',
+				'Liberation Mono',
+				'Courier New',
+				'monospace'
+			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

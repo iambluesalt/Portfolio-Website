@@ -11,7 +11,7 @@ export default function Blogs() {
             <div className="w-full rounded-xl border border-dashed border-emerald-400/50 dark:border-emerald-500/40 bg-emerald-50/40 dark:bg-emerald-900/10 p-6 md:p-10 text-center space-y-4">
               <p className="font-mono text-xs md:text-sm text-emerald-700 dark:text-emerald-300">
               </p>
-              <h2 className="text-lg md:text-xl font-semibold bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 bg-clip-text text-transparent">
+              <h2 className="font-heading text-lg md:text-xl font-semibold bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 bg-clip-text text-transparent">
                 Blog renderer warming up...
               </h2>
               <ul className="text-left inline-block text-[12px] md:text-sm text-zinc-600 dark:text-zinc-400 space-y-1 font-mono">

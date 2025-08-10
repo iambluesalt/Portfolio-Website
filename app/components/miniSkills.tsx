@@ -7,9 +7,9 @@ const MiniSkills = () => {
                 {skillsDataObj.map((skill) => (
                     <div
                         key={skill.name}
-                        className="group relative cursor-default flex flex-col items-center justify-center gap-2 w-20 h-20 rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-md transition"
+                        className="group relative cursor-default flex flex-col items-center justify-center gap-1.5 w-20 h-20 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-md hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200"
                     >
-                        <div className="w-9 h-9 flex items-center justify-center relative">
+                        <div className="w-8 h-8 flex items-center justify-center relative">
                             <img
                                 src={skill.src as string}
                                 alt={skill.name}
@@ -21,7 +21,7 @@ const MiniSkills = () => {
                                 className="object-contain w-full h-full hidden dark:block absolute top-0 left-0"
                             />
                         </div>
-                        <p className="text-[11px] font-medium text-center truncate">
+                        <p className="text-[11px] font-medium text-center truncate text-zinc-800 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                             {skill.name}
                         </p>
                     </div>

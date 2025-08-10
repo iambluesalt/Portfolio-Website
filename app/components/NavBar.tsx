@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <nav className="fixed top-0 inset-x-0 z-50 pt-3 px-4 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="flex h-14 md:h-16 items-center justify-between rounded-xl bg-white/70 dark:bg-zinc-900/60 backdrop-blur-md shadow-sm px-4 md:px-6">
+  <div className="flex h-14 md:h-16 items-center justify-between rounded-xl bg-white dark:bg-zinc-900 shadow-sm px-4 md:px-6">
           <Link to="/" className="font-semibold tracking-tight text-sm md:text-base">fudge<span className="text-zinc-400">.</span>fantastic</Link>
           <div className="hidden md:flex items-center gap-1 text-[13px]">
             {navLinks.map(l => (
@@ -33,7 +33,10 @@ export default function NavBar() {
             <div className="md:hidden">
               <Drawer open={open} onOpenChange={setOpen}>
                 <DrawerTrigger asChild>
-                  <button className="flex items-center text-2xl p-1 rounded-md bg-white/70 dark:bg-zinc-900/70 shadow-sm">
+                  <button
+                    className="flex items-center text-2xl p-1 outline-none bg-transparent shadow-none hover:shadow-none focus:ring-0"
+                    style={{ background: 'none' }}
+                  >
                     <IoMenu />
                   </button>
                 </DrawerTrigger>
