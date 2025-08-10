@@ -25,9 +25,9 @@ export default function NavBar() {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <a href="/Aaditya_Pandagle_Resume.pdf" download className="hidden md:inline-flex items-center gap-1 text-[12px] font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-              <FiFileText className="text-[14px]" />
-              <span>Resume</span>
+            {/* Resume icon and text for all screen sizes, hidden in drawer */}
+            <a href="/Aaditya_Pandagle_Resume.pdf" download className="inline-flex md:inline-flex items-center gap-1 text-[12px] font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 md:mr-0 mr-2">
+              <FiFileText className="text-[16px]" />
             </a>
             <DarkModeToggler />
             <div className="md:hidden">
@@ -43,10 +43,7 @@ export default function NavBar() {
                       {navLinks.map(link => (
                         <NavLink key={link.href} to={link.href} onClick={() => setOpen(false)} className={({isActive}) => `w-full text-center px-3 py-2 rounded-md font-medium text-sm ${isActive? 'bg-zinc-200/60 dark:bg-zinc-800/60': 'hover:bg-zinc-200/40 dark:hover:bg-zinc-800/40'}`}>{link.name}</NavLink>
                       ))}
-                      <a href="/Aaditya_Pandagle_Resume.pdf" download className="flex items-center justify-center gap-1 px-3 py-2 rounded-md font-medium text-sm hover:bg-zinc-200/40 dark:hover:bg-zinc-800/40">
-                        <FiFileText className="text-[16px]" />
-                        <span>Resume</span>
-                      </a>
+                      {/* Resume button removed from mobile drawer as requested */}
                     </div>
                   </div>
                 </DrawerContent>
