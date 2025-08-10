@@ -1,4 +1,3 @@
-// Sample projects data
 export const SomeProjects = [
   { name: "GitTalk",
     isLive: false, 

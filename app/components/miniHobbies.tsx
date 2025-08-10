@@ -68,22 +68,10 @@ const accounts = [
     }
 ];
 
-
 export default function MiniHobbies() {
     return (
-        <div className="md:mx-6 mx-3 cursor-default">
-            <div className="flex items-center gap-2 md:gap-4 my-8 mx-1">
-                <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
-                <div className="text-center">
-                    <h1 className="text-lg md:text-xl font-semibold">Let’s Merge</h1>
-                    <p className="text-[13px] dark:text-zinc-400">
-                    Just two chaotic minds
-                    </p>
-                </div>
-                <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
-            </div>
-
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="space-y-6">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                 {accounts.map((account, index) => {
                     const LogoIcon = account.logo;
                     return (
@@ -92,14 +80,11 @@ export default function MiniHobbies() {
                             href={account.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className=" dark:border dark:hover:border-zinc-600 border-zinc-200 p-4 dark:border-zinc-900 rounded-md shadow-sm dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 shadow-zinc-500 duration-150 dark:shadow-none relative overflow-hidden"
+                            className="group relative overflow-hidden rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur p-5 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-md transition"
                         >
-                            <h2 className="font-semibold md:text-lg text-base mb-2">{account.name}</h2>
-                            <p className="md:text-sm text-xs text-gray-700 dark:text-gray-300 mr-20">{account.description}</p>
-
-                            {/* Background Icon with Conditional Flip */}
-                            <LogoIcon className={`-rotate-12 absolute bottom-[-20px] right-[-18px] text-[120px] opacity-30 dark:opacity-15 
-                                ${account.needsFlip ? "scale-x-[-1]" : ""}`} />
+                            <h2 className="font-semibold text-base md:text-lg mb-2 tracking-tight">{account.name}</h2>
+                            <p className="md:text-sm text-xs text-zinc-600 dark:text-zinc-300 pr-6 leading-relaxed line-clamp-5">{account.description}</p>
+                            <LogoIcon className={`-rotate-12 absolute bottom-[-18px] right-[-16px] text-[120px] opacity-20 dark:opacity-10 pointer-events-none transition-transform ${account.needsFlip ? "scale-x-[-1]" : ""}`} />
                         </a>
                     );
                 })}

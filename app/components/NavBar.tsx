@@ -1,75 +1,60 @@
-import { Link } from "@remix-run/react";
+import { Link, NavLink } from "@remix-run/react";
 import { IoMenu } from "react-icons/io5";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "~/components/ui/drawer";
-import { Button } from "~/components/ui/button";
+import { Drawer, DrawerContent, DrawerTrigger } from "~/components/ui/drawer";
 import DarkModeToggler from "~/components/dark-mode-toggler";
 import { FiFileText } from "react-icons/fi";
 import { useState } from "react";
 
 const navLinks = [
   { href: "/", name: "Home" },
+  { href: "/about", name: "About" },
   { href: "/projects", name: "Projects" },
   { href: "/blogs", name: "Blogs" },
 ];
 
 export default function NavBar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-row justify-between items-center md:px-3 py-2 mx-3 uppercase">
-      <Link to="/" className="flex flex-row gap-1 md:gap-2 items-center">
-        <div className="md:text-md font-semibold px-4 py-1 border shadow-sm shadow-zinc-500 dark:shadow-none dark:hover:border-zinc-600 dark:border-zinc-900 duration-150 dark:bg-zinc-900 rounded-md">BlueSalt</div>
-      </Link>
-
-      {/* Desktop Navigation Links */}
-      <div className="hidden md:flex flex-row gap-0">
-        {navLinks.map((link) => (
-          <Link key={link.href} to={link.href}>
-            <Button variant="ghost" className="font-semibold text-[11px] uppercase">
-              {link.name}
-            </Button>
-          </Link>
-        ))}
-      </div>
-
-      {/* Mobile Drawer Menu */}
-      <div className="flex items-center md:gap-3 gap-2">
-        <div className="md:hidden">
-          <Drawer open={open} onOpenChange={setOpen}>
-            <DrawerTrigger asChild>
-              <button className="flex items-center text-2xl shadow-sm hover:shadow-zinc-400 dark:shadow-none hover:shadow-md shadow-zinc-400 dark:bg-zinc-900 p-1 rounded-md dark:hover:bg-zinc-800 duration-150">
-                <IoMenu />
-              </button>
-            </DrawerTrigger>
-            <DrawerContent>
-              <div className="mx-auto w-full max-w-sm">
-                <div className="p-4">
-                  <div className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                      <Link key={link.href} to={link.href} onClick={() => setOpen(false)}>
-                        <Button variant="ghost" className="w-full text-left font-semibold uppercase text-xs">
-                          {link.name}
-                        </Button>
-                      </Link>
-                    ))}
+    <nav className="fixed top-0 inset-x-0 z-50 pt-3 px-4 md:px-6">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex h-14 md:h-16 items-center justify-between rounded-xl bg-white/70 dark:bg-zinc-900/60 backdrop-blur-md shadow-sm px-4 md:px-6">
+          <Link to="/" className="font-semibold tracking-tight text-sm md:text-base">fudge<span className="text-zinc-400">.</span>fantastic</Link>
+          <div className="hidden md:flex items-center gap-1 text-[13px]">
+            {navLinks.map(l => (
+              <NavLink key={l.href} to={l.href} className={({isActive}) => `px-3 py-1.5 rounded-md font-medium transition text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 ${isActive? 'text-zinc-900 dark:text-zinc-100': ''}`}>{l.name}</NavLink>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="/Aaditya_Pandagle_Resume.pdf" download className="hidden md:inline-flex items-center gap-1 text-[12px] font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+              <FiFileText className="text-[14px]" />
+              <span>Resume</span>
+            </a>
+            <DarkModeToggler />
+            <div className="md:hidden">
+              <Drawer open={open} onOpenChange={setOpen}>
+                <DrawerTrigger asChild>
+                  <button className="flex items-center text-2xl p-1 rounded-md bg-white/70 dark:bg-zinc-900/70 shadow-sm">
+                    <IoMenu />
+                  </button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <div className="mx-auto w-full max-w-sm p-4">
+                    <div className="flex flex-col space-y-1">
+                      {navLinks.map(link => (
+                        <NavLink key={link.href} to={link.href} onClick={() => setOpen(false)} className={({isActive}) => `w-full text-center px-3 py-2 rounded-md font-medium text-sm ${isActive? 'bg-zinc-200/60 dark:bg-zinc-800/60': 'hover:bg-zinc-200/40 dark:hover:bg-zinc-800/40'}`}>{link.name}</NavLink>
+                      ))}
+                      <a href="/Aaditya_Pandagle_Resume.pdf" download className="flex items-center justify-center gap-1 px-3 py-2 rounded-md font-medium text-sm hover:bg-zinc-200/40 dark:hover:bg-zinc-800/40">
+                        <FiFileText className="text-[16px]" />
+                        <span>Resume</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </DrawerContent>
-          </Drawer>
+                </DrawerContent>
+              </Drawer>
+            </div>
+          </div>
         </div>
-
-        {/* Dark Mode Toggle */}
-        <a href="/Aaditya_Pandagle_Resume.pdf" download="Aaditya_Pandagle_Resume.pdf">
-          <button className="shadow-sm hover:shadow-zinc-400 dark:shadow-none hover:shadow-md shadow-zinc-400 p-2 rounded-md duration-150 dark:bg-zinc-900">
-            <FiFileText />
-          </button>
-        </a>
-        <DarkModeToggler />
       </div>
-    </div>
+    </nav>
   );
 }

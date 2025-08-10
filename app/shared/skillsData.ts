@@ -1,5 +1,4 @@
 export const skillsDataObj = [
-    // Full-Stack Development
     { dark: "/favicon.ico", name: "RemixJS", src: "/favicon.ico", category: "full-stack" },
     { dark: "/react.svg", name: "React", src: "/react.svg", category: "full-stack" },
     { dark: "/nodejs.svg", name: "Node.js", src: "/nodejs.svg", category: "full-stack" },
@@ -10,20 +9,14 @@ export const skillsDataObj = [
     { dark: "/tailwind.svg", name: "Tailwind", src: "/tailwind.svg", category: "full-stack" },
     { dark: "/darkVercel.svg", name: "Vercel", src: "/vercel.svg", category: "full-stack" },
     { dark: "/darkPrisma.svg", name: "Prisma", src: "/prisma.svg", category: "full-stack" },
-
-    // Generative AI
     { dark: "/langchain.svg", name: "LangChain", src: "/langchain.svg", category: "generative-ai" },
     { dark: "/qdrant.svg", name: "QDrant", src: "/qdrant.svg", category: "generative-ai" },
-
-    // AI/MLOps
     { dark: "/mlflow.svg", name: "MLflow", src: "/mlflow.svg", category: "ai-mlops" },
     { dark: "/docker.svg", name: "Docker", src: "/docker.svg", category: "ai-mlops" },
     { dark: "/jenkins.svg", name: "Jenkins", src: "/jenkins.svg", category: "ai-mlops" },
     { dark: "/gitlab.svg", name: "GitLab", src: "/gitlab.svg", category: "ai-mlops" },
     { dark: "/prometheus.svg", name: "Prometheus", src: "/prometheus.svg", category: "ai-mlops" },
     { dark: "/darkAWS.svg", name: "AWS", src: "/aws.svg", category: "ai-mlops" },
-
-    // Programming Languages & Tools
     { dark: "/python.svg", name: "Python", src: "/python.svg", category: "programming" },
     { dark: "/javascript.svg", name: "JavaScript", src: "/javascript.svg", category: "programming" },
     { dark: "/git.svg", name: "Git", src: "/git.svg", category: "tools" },

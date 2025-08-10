@@ -6,7 +6,7 @@ import { Link } from "@remix-run/react";
 
 export default function ProjectsDisplay() {
   const [searchTerm, setSearchTerm] = useState("");
-  const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
+  const projectContainerStyle = "cursor-pointer py-4 px-5 rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/5 transition hover:border-emerald-400/50 dark:hover:border-emerald-500/40";
 
   const explicitWords = ["milf","nsfw", "xxx", "porn", "boobs","boob", "butt", "69", "420", "daddy", "thicc", "sussy", "feet", "hot", "sugar daddy", "sex", "dick"];
   const funnyResponses = [
@@ -56,27 +56,24 @@ export default function ProjectsDisplay() {
       ) : (
         <>
           {/* Projects Display */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 relative">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 relative">
             {filteredProjects.map((project, index) => (
               <Link to={project.link.github} target="blank" key={index} className={`${projectContainerStyle} relative`}>
                 {/* Live Indicator */}
                 {project.isLive && (
-                  <>
-                    <span className="absolute top-[-5px] right-[-5px] h-3 w-3 rounded-full bg-zinc-900 animate-ping dark:bg-zinc-200"></span>
-                    <span className="absolute top-[-5px] right-[-5px] h-3 w-3 rounded-full bg-zinc-900 dark:bg-zinc-200"></span>
-                  </>
+                  <span className="absolute top-2 right-2 inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
                 )}
                 <div className="flex justify-between items-center mb-2">
                   <div className="flex items-baseline gap-1 decoration-[1.3px]">
-                    <h2 className="font-semibold text-[17px] md:text-lg">{project.name}</h2>
-                    <FaLink className="text-[10px] md:text-[12px]" />
+                    <h2 className="font-semibold text-[15px] md:text-[16px] tracking-tight">{project.name}</h2>
+                    <FaLink className="text-[11px]" />
                   </div>
-                  <span className="text-xs font-semibold">{project.status}</span>
+                  <span className="text-[10px] font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">{project.status}</span>
                 </div>
-                <p className="md:text-sm text-xs dark:text-zinc-400 line-clamp-5">{project.description}</p>
-                <div className="my-2">
+                <p className="text-[12px] md:text-[13px] text-zinc-600 dark:text-zinc-300 line-clamp-5 leading-relaxed">{project.description}</p>
+                <div className="mt-3 flex flex-wrap">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} className="tag mr-2 mb-1 text-white dark:text-black text-[11px] md:text-xs">
+                    <Badge key={tagIndex} className="mr-2 mb-1 text-[10px] md:text-[11px] font-medium bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-900">
                       {tag}
                     </Badge>
                   ))}

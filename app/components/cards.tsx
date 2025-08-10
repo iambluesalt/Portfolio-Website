@@ -23,7 +23,6 @@ const certificates = {
     },
 };
 
-
 const totalCertifications = Object.values(certificates)
     .flatMap(certs => Object.keys(certs)).length;
 
@@ -37,23 +36,21 @@ const cardData = [
         title: 'Years Of Existence',
         value: yearsOfExistence.toString(),
         description: (
-            <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-justify">
+            <div className="mt-2 space-y-4 text-zinc-700 dark:text-zinc-200 text-sm leading-relaxed">
                 <p>
-                    Born in <strong className="font-semibold text-red-500">Mumbai</strong>: December 2002, then got exiled to
-                    <span className="text-red-500 font-semibold"> Pune</span> in 2006, probably because fate needed some entertainment.
+                    Born in <strong className="font-semibold text-rose-500">Mumbai</strong>: December 2002, then exiled to
+                    <span className="text-rose-500 font-semibold"> Pune</span> in 2006.
                 </p>
                 <p>
-                    School? A fever dream. Had a crush so bad I could’ve written a novel about them, but they wouldn’t
-                    even notice me if I was on fire. <em className="text-gray-500">Tragic.</em>
+                    School? A fever dream. Had a crush so bad I could’ve written a novel but they wouldn’t
+                    even notice me if I was on fire.
                 </p>
                 <p>
-                    Junior college was a glorified scam—I pulled up <strong className="text-green-500"> 2 out of 9 times </strong>
-                    and somehow still got by. Senior college? Absolute madness. Not in terms of career, but at least I found
-                    a crew of lovable idiots to survive with.
+                    Junior college was a blur—I pulled up <strong className="text-emerald-500">2/9 times</strong> and still coasted. Senior college? Chaos—at least I found a crew.
                 </p>
                 <p>
-                    Now, I spend my days getting violated by
-                    <code className="text-zinc-900 bg-zinc-200 dark:bg-zinc-900 dark:text-white p-1 rounded-md mx-1">error messages</code>
+                    Now I spend my days getting roasted by
+                    <code className="mx-1 rounded bg-zinc-200 dark:bg-zinc-800 px-1 py-0.5 text-[11px]">error messages</code>.
                 </p>
             </div>
         ),
@@ -62,7 +59,7 @@ const cardData = [
         title: 'Years Of Experiences',
         value: '?',
         description: (
-            <div className="mt-2 space-y-4 text-gray-800 dark:text-gray-200 text-xs md:text-base text-center">
+            <div className="mt-2 space-y-4 text-center text-zinc-700 dark:text-zinc-200">
                 <FaUserSecret className="text-6xl mx-auto" />
                 <p>Shhhhhhhhh...It&apos;s a secret</p>
             </div>
@@ -72,11 +69,11 @@ const cardData = [
         title: 'Projects Completed',
         value: `${SomeProjects.length}+`,
         description: (
-            <div className="space-y-1 text-justify text-xs md:text-base">
-                <p className="text-sm mb-4 text-center md:text-left">To view all projects, <Link to="/projects" className="font-semibold hover:underline ">click here</Link></p>
+            <div className="space-y-2 text-sm">
+                <p className="text-center md:text-left text-zinc-600 dark:text-zinc-300">To view all projects, <Link to="/projects" className="font-semibold hover:underline">click here</Link></p>
                 {Object.entries(projectCategories).map(([category, count]) => (
-                    <p key={category} className="text-gray-700 dark:text-gray-300">
-                        <strong className="text-green-500 text-sm md:text-base">{category}:</strong> {count} projects
+                    <p key={category} className="text-zinc-700 dark:text-zinc-300">
+                        <strong className="text-emerald-500">{category}:</strong> {count} projects
                     </p>
                 ))}
             </div>
@@ -86,14 +83,14 @@ const cardData = [
         title: 'Certifications',
         value: `${totalCertifications}`,
         description: (
-            <div className="space-y-4 text-justify text-xs md:text-base">
+            <div className="space-y-5 text-sm">
                 {Object.entries(certificates).map(([platform, certs]) => (
-                    <div key={platform}>
-                        <h3 className="md:text-lg text-base font-semibold text-blue-500 dark:text-blue-400">{platform}</h3>
-                        <ul className="text-gray-700 dark:text-gray-300">
+                    <div key={platform} className="space-y-1">
+                        <h3 className="font-semibold text-emerald-500">{platform}</h3>
+                        <ul className="list-disc list-inside space-y-1">
                             {Object.entries(certs).map(([title, link]) => (
                                 <li key={title}>
-                                    <a href={link} target="_blank" rel="noopener noreferrer" className="text-purple-500 dark:text-purple-400 hover:underline">
+                                    <a href={link} target="_blank" rel="noopener noreferrer" className="text-cyan-600 dark:text-cyan-400 hover:underline">
                                         {title}
                                     </a>
                                 </li>
@@ -108,18 +105,19 @@ const cardData = [
 
 export default function Cards() {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-4 border-zinc-100 gap-2 md:px-6 px-3 py-2">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3">
             {cardData.map((card) => (
                 <Dialog key={card.title}>
                     <DialogTrigger asChild>
-                        <div className="dark:hover:border-zinc-600 hover:shadow-md hover:shadow-zinc-500 duration-150 flex flex-col items-center justify-center border dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none shadow-sm shadow-zinc-600 rounded-md p-3 w-full text-center cursor-pointer">
-                            <h2 className="md:text-xl text-[17px] font-bold text-gray-800 dark:text-white">{card.value}</h2>
-                            <p className="md:text-xs text-[11px] text-gray-600 dark:text-white/60 font-semibold">{card.title}</p>
+                        <div className="group relative flex flex-col items-center justify-center rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur p-4 sm:p-5 text-center cursor-pointer shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition hover:shadow-md">
+                            <h2 className="md:text-xl text-lg font-semibold text-zinc-900 dark:text-zinc-50 tracking-tight">{card.value}</h2>
+                            <p className="mt-1 text-[11px] md:text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400 font-medium">{card.title}</p>
+                            {/* Removed hover gradient overlay */}
                         </div>
                     </DialogTrigger>
-                    <DialogContent>
+                    <DialogContent className="max-h-[85vh] overflow-y-auto">
                         <DialogHeader>
-                            <DialogTitle>{card.title}</DialogTitle>
+                            <DialogTitle className="tracking-tight">{card.title}</DialogTitle>
                             <DialogDescription>{card.description}</DialogDescription>
                         </DialogHeader>
                     </DialogContent>

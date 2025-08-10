@@ -5,45 +5,30 @@ import { Link } from "@remix-run/react";
 
 // eslint-disable-next-line react/prop-types
 export default function MiniProjects({ limit = 3 }) {
-    const projectContainerStyle = "cursor-pointer py-3 px-4 rounded-lg border border-zinc-100 shadow-sm shadow-zinc-600 dark:border-zinc-900 dark:shadow-none dark:bg-zinc-900 hover:shadow-md hover:shadow-zinc-500 duration-150 dark:hover:border-zinc-600";
+    const projectContainerStyle = "cursor-pointer py-4 px-5 rounded-xl border border-zinc-200/70 dark:border-zinc-800/70 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/5 transition hover:border-emerald-400/50 dark:hover:border-emerald-500/40";
     const featuredProjects = SomeProjects.filter(project => project.featured).slice(0, limit);
 
     return (
-        <div className="md:mx-6 mx-3">
-            <div className="flex items-center gap-3 md:gap-4 my-8 mx-1">
-                <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
-                <div className="text-center">
-                    <h1 className="text-lg md:text-xl font-semibold">Featured Projects!</h1>
-                    <Link to="/projects" className="text-[12px]">
-                        <p className="hover:underline hover:underline-offset-2 dark:text-zinc-400">
-                            Click me to view all
-                        </p>
-                    </Link>
-                </div>
-                <div className="flex-1 border-t border-zinc-900 dark:border-zinc-300"></div>
+        <div className="space-y-6">
+            <div className="flex justify-between items-end">
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 relative">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 relative">
                 {featuredProjects.map((project, index) => (
                     <Link to={project.link.github} target="_blank" key={index} className={`${projectContainerStyle} relative`} rel="noreferrer">
                         {project.isLive && (
-                            <>
-                                <span className="absolute top-[-5px] right-[-5px] h-3 w-3 rounded-full bg-zinc-900 animate-ping dark:bg-zinc-200"></span>
-                                <span className="absolute top-[-5px] right-[-5px] h-3 w-3 rounded-full bg-zinc-900 dark:bg-zinc-200"></span>
-                            </>
+                            <span className="absolute top-2 right-2 inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
                         )}
-
-                        <div className="flex justify-between items-center mb-2">
+                        <div className="flex justify-between items-center mb-3">
                             <div className="flex items-baseline gap-1 decoration-[1.3px]">
-                                <h2 className="font-semibold text-[17px] md:text-lg">{project.name}</h2>
-                                <FaLink className="text-[10px] md:text-[12px]" />
+                                <h2 className="font-semibold text-[15px] md:text-[16px] tracking-tight">{project.name}</h2>
+                                <FaLink className="text-[11px]" />
                             </div>
-                            <span className="text-xs font-semibold">{project.status}</span>
+                            <span className="text-[10px] font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">{project.status}</span>
                         </div>
-
-                        <p className="md:text-sm text-xs dark:text-zinc-400 line-clamp-5">{project.description}</p>
-                        <div className="my-2">
+                        <p className="text-[12px] md:text-[13px] text-zinc-600 dark:text-zinc-300 line-clamp-5 leading-relaxed">{project.description}</p>
+                        <div className="mt-3 flex flex-wrap">
                             {project.tags.map((tag, tagIndex) => (
-                                <Badge key={tagIndex} className="tag mr-2 mb-1 text-white dark:text-black text-[11px] md:text-xs">
+                                <Badge key={tagIndex} className="mr-2 mb-1 text-[10px] md:text-[11px] font-medium bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-900">
                                     {tag}
                                 </Badge>
                             ))}
@@ -51,11 +36,13 @@ export default function MiniProjects({ limit = 3 }) {
                     </Link>
                 ))}
             </div>
+            {/* Center */}
+            <div className="text-center">
+                <Link to="/projects" className="text-xs md:text-medium font-medium text-emerald-600 dark:text-emerald-400 hover:underline">View all</Link>
+            </div>
 
             {featuredProjects.length === 0 && (
-                <div className="text-center text-zinc-400 mt-4">
-                    No featured projects available.
-                </div>
+                <div className="text-center text-zinc-400 mt-4 text-sm">No featured projects available.</div>
             )}
         </div>
     );
