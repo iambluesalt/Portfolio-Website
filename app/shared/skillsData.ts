@@ -7,19 +7,19 @@ export const skillsDataObj = [
     { dark: "/postgresql.svg", name: "PostgreSQL", src: "/postgresql.svg", category: "full-stack" },
     { dark: "/mongodb.svg", name: "MongoDB", src: "/mongodb.svg", category: "full-stack" },
     { dark: "/tailwind.svg", name: "Tailwind", src: "/tailwind.svg", category: "full-stack" },
-    { dark: "/darkVercel.svg", name: "Vercel", src: "/vercel.svg", category: "full-stack" },
+    // { dark: "/darkVercel.svg", name: "Vercel", src: "/vercel.svg", category: "full-stack" },
     { dark: "/darkPrisma.svg", name: "Prisma", src: "/prisma.svg", category: "full-stack" },
     { dark: "/langchain.svg", name: "LangChain", src: "/langchain.svg", category: "generative-ai" },
     { dark: "/qdrant.svg", name: "QDrant", src: "/qdrant.svg", category: "generative-ai" },
     { dark: "/mlflow.svg", name: "MLflow", src: "/mlflow.svg", category: "ai-mlops" },
     { dark: "/docker.svg", name: "Docker", src: "/docker.svg", category: "ai-mlops" },
     { dark: "/jenkins.svg", name: "Jenkins", src: "/jenkins.svg", category: "ai-mlops" },
-    { dark: "/gitlab.svg", name: "GitLab", src: "/gitlab.svg", category: "ai-mlops" },
+    // { dark: "/gitlab.svg", name: "GitLab", src: "/gitlab.svg", category: "ai-mlops" },
     { dark: "/prometheus.svg", name: "Prometheus", src: "/prometheus.svg", category: "ai-mlops" },
     { dark: "/darkAWS.svg", name: "AWS", src: "/aws.svg", category: "ai-mlops" },
     { dark: "/python.svg", name: "Python", src: "/python.svg", category: "programming" },
     { dark: "/javascript.svg", name: "JavaScript", src: "/javascript.svg", category: "programming" },
     { dark: "/git.svg", name: "Git", src: "/git.svg", category: "tools" },
     { dark: "/ubuntu.svg", name: "Linux", src: "/ubuntu.svg", category: "tools" },
-    { dark: "/visual.svg", name: "VS Code", src: "/visual.svg", category: "tools" }
+    // { dark: "/visual.svg", name: "VS Code", src: "/visual.svg", category: "tools" }
 ];

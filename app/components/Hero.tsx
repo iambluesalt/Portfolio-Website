@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { IoLogoOctocat } from "react-icons/io";
 import { FlipWords } from "./ui/flip-words";
 
 export default function Hero() {

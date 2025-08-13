@@ -7,8 +7,6 @@ import MiniProjects from "~/components/miniProjects";
 import MiniSkills from "~/components/miniSkills";
 import Transition from "~/components/transition";
 import { SectionDivider } from "~/components/SectionDivider";
-import Footer from "~/components/Footer";
-import NavBar from "~/components/NavBar";
 
 export const meta: MetaFunction = () => {
   return [

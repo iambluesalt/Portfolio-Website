@@ -27,7 +27,7 @@ export default function NavBar() {
           <div className="flex items-center gap-3">
             {/* Resume icon and text for all screen sizes, hidden in drawer */}
             <a href="/Aaditya_Pandagle_Resume.pdf" download className="inline-flex md:inline-flex items-center gap-1 text-[12px] font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 md:mr-0 mr-2">
-              <FiFileText className="text-[16px]" />
+              <FiFileText className="text-[16px] dark:text-white" />
             </a>
             <DarkModeToggler />
             <div className="md:hidden">

@@ -31,7 +31,7 @@ export default function MiniProjects({ limit = 3 }) {
                         <p className="text-[12px] md:text-[13px] text-zinc-600 dark:text-zinc-300 line-clamp-5 leading-relaxed mb-2">{project.description}</p>
                         <div className="flex flex-wrap gap-1 mt-auto">
                             {project.tags.map((tag, tagIndex) => (
-                                <Badge key={tagIndex} className="mr-2 mb-1 text-[10px] md:text-[11px] font-medium bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-900">
+                                <Badge key={tagIndex} className="mr-2 mb-1 text-[10px] md:text-[11px] font-semibold bg-zinc-800 dark:bg-zinc-200 text-white dark:text-zinc-900">
                                     {tag}
                                 </Badge>
                             ))}

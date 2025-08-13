@@ -1,8 +1,15 @@
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin, FaInstagram, FaYoutube, FaHackerrank, FaSpotify, FaDeviantart} from "react-icons/fa";
-import { SiLeetcode, SiChessdotcom } from "react-icons/si";
+import { FaLinkedin, FaInstagram, FaYoutube, FaHackerrank, FaSpotify, FaDeviantart, FaDiscord } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const accounts = [
+    {
+        name: "Discord",
+        logo: FaDiscord,
+        needsFlip: false,
+        link: "https://discord.gg/832aejRfUx",
+    description: "A ghost town where nobody’s ever active, but hey—your presence might actually make it less dead. Join, lurk, and maybe say hi so the tumbleweeds have company."
+    },
     {
         name: "GitHub",
         logo: IoLogoGithub,
@@ -59,13 +66,6 @@ const accounts = [
         link: "https://www.deviantart.com/scorpoking",
         description: "Where I draw naked people in the name of ‘art’ and ‘anatomy studies.’ If you’re here to judge, at least leave a like first."
     },
-    {
-        name: "Chess.com",
-        logo: SiChessdotcom,
-        needsFlip: false,
-        link: "https://www.chess.com/member/scorpo15",
-        description: "I play chess like I live life—impulsively, recklessly, and with zero long-term strategy. Catch me blundering my queen in record time."
-    }
 ];
 
 export default function MiniHobbies() {

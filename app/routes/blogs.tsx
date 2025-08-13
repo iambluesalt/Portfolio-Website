@@ -1,5 +1,4 @@
 import Transition from "~/components/transition";
-import { SectionHeading } from "~/components/SectionHeading";
 
 export default function Blogs() {
   return (
