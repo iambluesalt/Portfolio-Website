@@ -17,15 +17,6 @@ export const SomeProjects = [
     category: "Full-Stack Development",
     featured: true
   },
-  { name: "Taskly",
-    isLive: true, 
-    description: "A robust activity-tracking tool designed to help individuals efficiently monitor and manage their time. This platform provides a seamless interface to log, categorize, and analyze your activities.", 
-    status: "Work In Progress (Live)", 
-    tags: ["React", "RemixJS", "TailwindCSS", "PostMan", "JavaScript"],
-    link: {github: "https://github.com/fudge-fantastic/timesheet-manager"},
-    category: "Full-Stack Development",
-    featured: true
-  },
   { name: "Portfolio V0.1",
     isLive: false, 
     description: "Developed a dynamic portfolio website using HTML, CSS, and JavaScript, integrated with Django for robust backend functionality.", 
@@ -42,16 +33,7 @@ export const SomeProjects = [
     tags: ["React", "RemixJS", "TailwindCSS", "QDrant", "Langchain", "NextUI", "Huggingface", "Python", "JavaScript", "Large Language Models"],
     link: {github: "https://github.com/fudge-fantastic/QueryForge"},
     category: "AI & ML",
-    featured: true 
-  },
-  { name: "Generative AI",
-    isLive: false, 
-    description: "Tested the capabilities of LLMs, specifically Gemini and LLaMA, using Groq. The focus was on evaluating their strengths, limitations, and overall performance. The results will guide future explorations and optimizations.", 
-    status: "Archived", 
-    tags: ["Python","Large Language Models"],
-    link: {github: "https://github.com/fudge-fantastic/GenerativeAI"},
-    category: "AI & ML",
-    featured: true
+    featured: false 
   },
   { name: "LeetCode Solutions",
     isLive: false, 

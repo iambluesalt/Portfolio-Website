@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="mt-auto w-full border-t border-zinc-200/70 dark:border-zinc-800/60 bg-white dark:bg-zinc-900">
+        <div className="mt-auto w-full border-t border-zinc-200/70 dark:border-zinc-800/60 bg-white dark:bg-zinc-900">
             <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col items-center gap-2 text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
                 <div className="flex items-center gap-2 mb-1">
                     <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 font-semibold text-[11px] uppercase tracking-wider">
@@ -17,6 +17,6 @@ export default function Footer() {
                     I built this sh*t, ME! Brick by brick. <span className="hidden md:inline">|</span> © {new Date().getFullYear()} Aaditya Pandagle
                 </div>
             </div>
-        </footer>
+        </div>
     );
 }

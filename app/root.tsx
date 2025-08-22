@@ -9,11 +9,11 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 import { ThemeProvider } from "~/components/theme-provider";
 import NavBar from "~/components/NavBar";
+import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 import "./tailwind.css";
 import { ScrollArea } from "./components/ui/scroll-area";
-import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => [
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
