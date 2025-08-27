@@ -1,5 +1,11 @@
 import ProjectsDisplay from "~/components/ProjectContent";
 import Transition from "~/components/transition";
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => [
+    { title: "Projects — fudge-fantastic" },
+    { name: "description", content: "A selection of projects by Aaditya Pandagle." },
+];
 
 export default function Projects() {
     return (

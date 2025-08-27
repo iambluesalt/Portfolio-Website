@@ -11,7 +11,7 @@ import { SectionDivider } from "~/components/SectionDivider";
 export const meta: MetaFunction = () => {
   return [
     { title: "fudge-fantastic" },
-    { name: "description", content: "What the fuck is oatmeal!" },
+    { name: "description", content: "Personal site of Aaditya Pandagle — Web and AI developer :)" },
   ];
 };
 

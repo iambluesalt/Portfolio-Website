@@ -1,4 +1,10 @@
 import Transition from "~/components/transition";
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => [
+  { title: "Blogs — fudge-fantastic" },
+  { name: "description", content: "Writings and notes by Aaditya Pandagle." },
+];
 
 export default function Blogs() {
   return (

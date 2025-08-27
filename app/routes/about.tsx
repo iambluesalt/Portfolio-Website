@@ -58,10 +58,10 @@ export default profile;`;
   );
 }
 
-export const meta: MetaFunction = () => ([
-  { title: 'About • fudge-fantastic' },
-  { name: 'description', content: 'About Aaditya Pandagle' }
-]);
+export const meta: MetaFunction = () => [
+  { title: 'About — fudge-fantastic' },
+  { name: 'description', content: 'About Aaditya Pandagle — software developer.' },
+];
 
 export default function AboutRoute() {
   return (
