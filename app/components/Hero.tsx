@@ -5,12 +5,11 @@ import { FlipWords } from "./ui/flip-words";
 export default function Hero() {
     const roles4pc = [
         "Data Scientist",
-        "Machine Learning Engineer",
-        "Deep Learning Engineer",
+        "ML/DL Engineer",
         "AI/MLOps Engineer",
         "Potato Debugger",
         "Script Junkie",
-        "Runtime Wrecker",
+        "Vibe Coder",
         "Full Stack Data Scientist",
         "Memory Leak Bandit, lol",
         "Git Grimlin",
@@ -21,12 +20,12 @@ export default function Hero() {
     const roles4mob = [
         "Data Scientist",
         "Full Stack Dev.",
-        "Deep Learning Eng.",
+        "ML/DL Engineer",
         "AI/MLOps Eng.",
         "Potato Debugger",
         "Script Junkie",
         "Full-Stack Dev.",
-        "Runtime Wrecker",
+        "Vibe Coder",
         "Git Grimlin",
         "Generative AI Dev.",
     ];

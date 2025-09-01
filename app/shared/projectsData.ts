@@ -1,10 +1,10 @@
 export const SomeProjects = [
-  { name: "GitTalk",
-    isLive: false, 
-    description: "GitTalk lets you chat with GitHub repositories — ask questions, get insights, and understand code instantly. Whether it's a single file or the whole repo, GitTalk turns your GitHub projects into conversational partners.", 
+  { name: "PFS Magnets",
+    isLive: true, 
+    description: "Created an elegant website designed for selling beautifully crafted magnets in customized and specific sizes. With a stunning UI, it provides a seamless experience for users to purchase personalized magnets that reflect their unique style and personality.", 
     status: "Work In Progress", 
-    tags: ["React", "RemixJS", "TailwindCSS", "Prisma", "PostgreSQL", "TypeScript", "Langchain", "Qdrant/Weaviate", "Large Language Models"],
-    link: {github: "https://github.com/fudge-fantastic/GitTalk_V2"},
+    tags: ["React", "React-Router", "TailwindCSS", "TypeScript", "Shadcn"],
+    link: {github: "https://pfs-magnets.vercel.app/"},
     category: "Full-Stack Development",
     featured: true
   },
@@ -25,15 +25,6 @@ export const SomeProjects = [
     link: {github: "https://github.com/fudge-fantastic/Portfolio_V0.1_CLOSED"},
     category: "Web Development",
     featured: false
-  },
-  { name: "Query Forge",
-    isLive: false, 
-    description: "Developed a tool leveraging LangChain, Hugging Face models, and Qdrant VectorDB for efficient website summarization by extracting and retrieving semantically similar content based on a provided URL.", 
-    status: "Archived", 
-    tags: ["React", "RemixJS", "TailwindCSS", "QDrant", "Langchain", "NextUI", "Huggingface", "Python", "JavaScript", "Large Language Models"],
-    link: {github: "https://github.com/fudge-fantastic/QueryForge"},
-    category: "AI & ML",
-    featured: false 
   },
   { name: "LeetCode Solutions",
     isLive: false, 
@@ -62,12 +53,4 @@ export const SomeProjects = [
     category: "AI & ML",
     featured: false
   },
-  { name: "Deep Learning",
-    description: "Trained models to recognize patterns like a digital detective, tweaking layers until they finally stopped crying. It’s all about pushing pixels, tweaking weights, and hoping the AI doesn’t start questioning its own existence.",
-    status: "Archived",
-    tags: ["Python", "Tensorflow", "PyTorch", "Computer Vision"],
-    link: {github: "https://github.com/fudge-fantastic/Deep_Learning"},
-    category: "AI & ML",
-    featured: false
-  }
 ];

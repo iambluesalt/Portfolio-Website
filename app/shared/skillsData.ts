@@ -1,5 +1,5 @@
 export const skillsDataObj = [
-    { dark: "/favicon.ico", name: "RemixJS", src: "/favicon.ico", category: "full-stack" },
+    { dark: "/rr_dark.svg", name: "React-Router", src: "/rr.svg", category: "full-stack" },
     { dark: "/react.svg", name: "React", src: "/react.svg", category: "full-stack" },
     { dark: "/nodejs.svg", name: "Node.js", src: "/nodejs.svg", category: "full-stack" },
     { dark: "/fastapi.svg", name: "FastAPI", src: "/fastapi.svg", category: "full-stack" },
