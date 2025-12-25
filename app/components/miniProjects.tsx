@@ -5,16 +5,16 @@ import { Link } from "@remix-run/react";
 
 // eslint-disable-next-line react/prop-types
 export default function MiniProjects({ limit = 3 }) {
-    const projectContainerStyle = "group relative cursor-pointer flex flex-col items-start justify-between gap-2 min-h-[140px] py-5 px-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200";
-    const featuredProjects = SomeProjects.filter(project => project.featured).slice(0, limit);
+    const projectContainerStyle = "group relative cursor-pointer flex flex-col items-start justify-between gap-2 min-h-[140px] py-4 sm:py-5 px-5 sm:px-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200";
+    const featuredProjects = SomeProjects.filter(project => project.featured && !project.legendary).slice(0, limit);
 
     return (
         <div className="space-y-6">
             <div className="flex justify-between items-end">
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 relative">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 relative">
                 {featuredProjects.map((project, index) => (
-                    <Link to={project.link.github} target="_blank" key={index} className={`${projectContainerStyle} relative`} rel="noreferrer">
+                    <Link to={project.link.playStore || project.link.github || "#"} target="_blank" key={index} className={`${projectContainerStyle} relative`} rel="noreferrer">
                         {project.isLive && (
                             <span className="absolute -top-1 -right-0 flex h-3 w-3 z-10">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>

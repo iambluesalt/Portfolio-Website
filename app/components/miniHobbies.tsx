@@ -71,7 +71,7 @@ const accounts = [
 export default function MiniHobbies() {
     return (
         <div className="space-y-6">
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-5">
                 {accounts.map((account, index) => {
                     const LogoIcon = account.logo;
                     return (
@@ -80,7 +80,7 @@ export default function MiniHobbies() {
                             href={account.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200"
+                            className="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 sm:p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200"
                         >
                             <h2 className="font-heading font-semibold text-base md:text-lg mb-2 tracking-tight text-zinc-800 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{account.name}</h2>
                             <p className="md:text-sm text-xs text-zinc-600 dark:text-zinc-300 pr-6 leading-relaxed line-clamp-5 mb-3">{account.description}</p>

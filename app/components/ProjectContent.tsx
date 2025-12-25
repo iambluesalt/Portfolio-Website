@@ -3,10 +3,11 @@ import { SomeProjects } from "~/shared/projectsData";
 import { Badge } from "./ui/badge";
 import { FaLink } from "react-icons/fa";
 import { Link } from "@remix-run/react";
+import LegendaryProjectCard from "./LegendaryProjectCard";
 
 export default function ProjectsDisplay() {
   const [searchTerm, setSearchTerm] = useState("");
-  const projectContainerStyle = "group relative cursor-pointer flex flex-col items-start justify-between gap-2 min-h-[140px] py-5 px-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200";
+  const projectContainerStyle = "group relative cursor-pointer flex flex-col items-start justify-between gap-2 min-h-[140px] py-4 sm:py-5 px-5 sm:px-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200";
 
   const explicitWords = ["milf","nsfw", "xxx", "porn", "boobs","boob", "butt", "69", "420", "daddy", "thicc", "sussy", "feet", "hot", "sugar daddy", "sex", "dick"];
   const funnyResponses = [
@@ -35,8 +36,13 @@ export default function ProjectsDisplay() {
     );
   });
 
+  // Separate legendary projects
+  const legendaryProjects = SomeProjects.filter(project => project.legendary);
+  const regularFilteredProjects = filteredProjects.filter(project => !project.legendary);
+
   return (
     <div className="w-full">
+      
       {/* Search Input */}
       <div className="mb-3 md:mb-4">
         <input
@@ -48,6 +54,11 @@ export default function ProjectsDisplay() {
         />
       </div>
 
+      {/* Legendary Projects Showcase */}
+      {legendaryProjects.map((project, index) => (
+        <LegendaryProjectCard key={index} project={project} variant="showcase" />
+      ))}
+
       {/* Explicit Content Message */}
       {isExplicit ? (
         <div className="text-center text-red-500 dark:text-red-400 mt-4 text-lg font-semibold">
@@ -56,9 +67,9 @@ export default function ProjectsDisplay() {
       ) : (
         <>
           {/* Projects Display */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 relative">
-            {filteredProjects.map((project, index) => (
-              <Link to={project.link.github} target="blank" key={index} className={`${projectContainerStyle} relative`}>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 relative mt-5">
+            {regularFilteredProjects.map((project, index) => (
+              <Link to={project.link.playStore || project.link.github || "#"} target="blank" key={index} className={`${projectContainerStyle} relative`}>
                 {/* Live Indicator */}
                 {project.isLive && (
                   <span className="absolute -top-1 -right-0 flex h-3 w-3 z-10">
@@ -86,7 +97,7 @@ export default function ProjectsDisplay() {
           </div>
 
           {/* No Results Message (only if it's not an explicit search) */}
-          {filteredProjects.length === 0 && (
+          {regularFilteredProjects.length === 0 && (
             <div>
               <div className="rotate-90 flex justify-center items-center text-9xl p-8">
                 :(

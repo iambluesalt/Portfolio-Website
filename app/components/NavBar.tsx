@@ -15,9 +15,9 @@ const navLinks = [
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 pt-3 px-4 md:px-6">
+    <nav className="fixed top-0 inset-x-0 z-50 pt-2 sm:pt-3 px-3 sm:px-4 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="flex h-14 md:h-16 items-center justify-between rounded-xl bg-white dark:bg-zinc-900 shadow-md px-4 md:px-6">
+        <div className="flex h-14 sm:h-14 md:h-16 items-center justify-between rounded-xl bg-white dark:bg-zinc-900 shadow-md px-3 sm:px-4 md:px-6">
           <Link to="/" className="font-semibold tracking-tight text-sm md:text-base">fudge<span className="text-zinc-400">.</span>fantastic</Link>
           <div className="hidden md:flex items-center gap-1 text-[13px]">
             {navLinks.map(l => (
