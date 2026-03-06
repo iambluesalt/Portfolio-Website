@@ -18,7 +18,7 @@ export default function NavBar() {
     <nav className="fixed top-0 inset-x-0 z-50 pt-2 sm:pt-3 px-3 sm:px-4 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="flex h-14 sm:h-14 md:h-16 items-center justify-between rounded-xl bg-white dark:bg-zinc-900 shadow-md px-3 sm:px-4 md:px-6">
-          <Link to="/" className="font-semibold tracking-tight text-sm md:text-base">fudge<span className="text-zinc-400">.</span>fantastic</Link>
+          <Link to="/" className="font-semibold tracking-tight text-sm md:text-base"><span className="text-zinc-400">.</span>bluesalt</Link>
           <div className="hidden md:flex items-center gap-1 text-[13px]">
             {navLinks.map(l => (
               <NavLink key={l.href} to={l.href} className={({ isActive }) => `px-3 py-1.5 rounded-md font-medium transition text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 ${isActive ? 'text-zinc-900 dark:text-zinc-100' : ''}`}>{l.name}</NavLink>
