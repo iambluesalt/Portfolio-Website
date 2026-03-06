@@ -23,7 +23,7 @@ export const SomeProjects = [
     description: "WordSmith is a user-friendly blogging platform designed with an elegant and visually appealing aesthetic. Built using RemixJS and React, it offers a seamless and engaging experience for both writers and readers.",
     status: "Archived (Live)",
     tags: ["React", "RemixJS", "TailwindCSS", "Prisma", "PostgreSQL", "NextUI", "TypeScript"],
-    link: {github: "https://github.com/fudge-fantastic/WordSmith"},
+    link: {github: "https://github.com/iambluesalt/WordSmith"},
     category: "Full-Stack Development",
     featured: true
   },
@@ -32,7 +32,7 @@ export const SomeProjects = [
     description: "Developed a dynamic portfolio website using HTML, CSS, and JavaScript, integrated with Django for robust backend functionality.",
     status: "Closed",
     tags: ["HTML", "CSS", "JavaScript", "Django"],
-    link: {github: "https://github.com/fudge-fantastic/Portfolio_V0.1_CLOSED"},
+    link: {github: "https://github.com/iambluesalt/Portfolio_V0.1_CLOSED"},
     category: "Web Development",
     featured: false
   },
@@ -41,7 +41,7 @@ export const SomeProjects = [
     description: "Grinding Leetcode problems like a maniac—half to impress those big tech overlords, half to untangle the mess I call logic. It's me vs. algorithms, one brain cell at a time, we're making progress!",
     status: "Archived",
     tags: ["Python"],
-    link: {github: "https://github.com/fudge-fantastic/CLeet"},
+    link: {github: "https://github.com/iambluesalt/CLeet"},
     category: "Competitive Programming",
     featured: false
   },
@@ -50,7 +50,7 @@ export const SomeProjects = [
     description: "Trained models, slapped them into a Flask suit, boxed it all up with Docker, and let Jenkins handle the dirty CI/CD work. GitHub webhooks kept it smooth, and I babysat it with Prometheus—because even AI needs hand-holding sometimes.",
     status: "Closed",
     tags: ["Python", "FastAPI", "Flask", "MLFlow", "Jenkins", "Docker", "CI/CD", "AWS"],
-    link: {github: "https://github.com/fudge-fantastic/Kaizen_CLOSED"},
+    link: {github: "https://github.com/iambluesalt/Kaizen_CLOSED"},
     category: "DevOps & MLOps",
     featured: true
   },
@@ -59,7 +59,7 @@ export const SomeProjects = [
     description: "Spent my days making machines classify and regress—mini-projects that screamed 'predict this!' and 'analyze that!' Crunching data, running stats, and building predictive models like a caffeinated fortune teller with a knack for spreadsheets.",
     status: "Archived",
     tags: ["Python", "Data Analytics", "Statistical Analysis"],
-    link: {github: "https://github.com/fudge-fantastic/Machine_Learning"},
+    link: {github: "https://github.com/iambluesalt/Machine_Learning"},
     category: "AI & ML",
     featured: false
   },

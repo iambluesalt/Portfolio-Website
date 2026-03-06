@@ -3,7 +3,7 @@ import Transition from "~/components/transition";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => [
-    { title: "Projects — fudge-fantastic" },
+    { title: "Projects — bluesalt" },
     { name: "description", content: "A selection of projects by Aaditya Pandagle." },
 ];
 

@@ -7,7 +7,7 @@
 // const code = `
 // // Personal deets
 // lit age be 22 rn
-// lit alias be ["Bluesalt", "fudge_fantastic", "Aaditya Pandagle"] rn
+// lit alias be ["Bluesalt", "bluesalt", "Aaditya Pandagle"] rn
 // lit skills be clapback("ls --cool-skills") rn // Fetch from the system 😎
 // lit occupation be "Full-Stack Data Scientist" rn
 

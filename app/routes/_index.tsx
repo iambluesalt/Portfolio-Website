@@ -12,7 +12,7 @@ import { SomeProjects } from "~/shared/projectsData";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "fudge-fantastic" },
+    { title: "bluesalt" },
     { name: "description", content: "Personal site of Aaditya Pandagle — Web and AI developer :)" },
   ];
 };

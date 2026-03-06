@@ -14,7 +14,7 @@ const accounts = [
         name: "GitHub",
         logo: IoLogoGithub,
         needsFlip: false,
-        link: "https://github.com/fudge-fantastic",
+        link: "https://github.com/iambluesalt",
         description: "A graveyard of unfinished projects, questionable commits, and occasional strokes of genius. Step in, but don’t trip over the technical debt."
     },
     {
@@ -28,7 +28,7 @@ const accounts = [
         name: "Instagram",
         logo: FaInstagram,
         needsFlip: true,
-        link: "https://www.instagram.com/fudge_fantastic/",
+        link: "https://www.instagram.com/iambluesalt/",
         description: "A black hole of dopamine, cursed memes, and AI-generated degeneracy. Sometimes I post. Mostly, I just lose brain cells."
     },
     {

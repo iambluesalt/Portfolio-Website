@@ -59,7 +59,7 @@ export default profile;`;
 }
 
 export const meta: MetaFunction = () => [
-  { title: 'About — fudge-fantastic' },
+  { title: 'About — bluesalt' },
   { name: 'description', content: 'About Aaditya Pandagle — software developer.' },
 ];
 
