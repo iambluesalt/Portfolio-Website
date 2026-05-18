@@ -1,5 +1,5 @@
 import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin, FaInstagram, FaYoutube, FaHackerrank, FaSpotify, FaDeviantart, FaDiscord } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube, FaHackerrank, FaSpotify, FaDeviantart, FaDiscord, FaExternalLinkAlt } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
 const accounts = [
@@ -8,7 +8,7 @@ const accounts = [
         logo: FaDiscord,
         needsFlip: false,
         link: "https://discord.gg/832aejRfUx",
-    description: "A ghost town where nobody’s ever active, but hey—your presence might actually make it less dead. Join, lurk, and maybe say hi so the tumbleweeds have company."
+        description: "A ghost town where nobody’s ever active, but hey—your presence might actually make it less dead. Join, lurk, and maybe say hi so the tumbleweeds have company."
     },
     {
         name: "GitHub",
@@ -53,13 +53,6 @@ const accounts = [
         description: "Grinding problems for imaginary internet points and self-worth validation. You know, the usual."
     },
     {
-        name: "Spotify",
-        logo: FaSpotify,
-        needsFlip: true,
-        link: "https://open.spotify.com/user/ih50xzwm6ho1jpcbnbrwm880r",
-        description: "A playlist so deep, you might find your repressed memories in there. Expect melancholy, existential bangers, and a mid-life crisis in musical form."
-    },
-    {
         name: "DeviantArt",
         logo: FaDeviantart,
         needsFlip: false,
@@ -70,9 +63,43 @@ const accounts = [
 
 export default function MiniHobbies() {
     return (
-        <div className="space-y-6">
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-5">
+        <div className="space-y-5">
+            {/* Spotify Artist — featured embed */}
+            <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 sm:p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5">
+                <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2.5">
+                        <FaSpotify className="text-[#1DB954] text-xl" />
+                        <h2 className="font-heading font-semibold text-base md:text-lg tracking-tight text-zinc-800 dark:text-zinc-100">
+                            Spotify Artist
+                        </h2>
+                    </div>
+                    <a
+                        href="https://open.spotify.com/artist/0fnEZ0HfaDeBR57LOnInv9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-[#1DB954] transition-colors"
+                    >
+                        Open in Spotify <FaExternalLinkAlt className="text-[10px]" />
+                    </a>
+                </div>
+                <iframe
+                    title="Spotify Artist Player — Aaditya Pandagle"
+                    style={{ borderRadius: "16px" }}
+                    src="https://open.spotify.com/embed/artist/0fnEZ0HfaDeBR57LOnInv9?utm_source=generator&theme=0"
+                    width="100%"
+                    height="352"
+                    // frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                />
+            </div>
+
+            {/* Social links grid */}
+            <div className="grid md:grid-cols-6 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-5">
                 {accounts.map((account, index) => {
+                    const remainder = accounts.length % 3;
+                    const isLastRow = remainder !== 0 && index >= accounts.length - remainder;
                     const LogoIcon = account.logo;
                     return (
                         <a
@@ -80,7 +107,7 @@ export default function MiniHobbies() {
                             href={account.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 sm:p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200"
+                            className={`group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 sm:p-6 shadow-md ring-1 ring-black/5 dark:ring-white/5 hover:shadow-lg hover:border-emerald-400/60 dark:hover:border-emerald-500/50 transition-all duration-200 ${isLastRow ? "md:col-span-3" : "md:col-span-2"}`}
                         >
                             <h2 className="font-heading font-semibold text-base md:text-lg mb-2 tracking-tight text-zinc-800 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{account.name}</h2>
                             <p className="md:text-sm text-xs text-zinc-600 dark:text-zinc-300 pr-6 leading-relaxed line-clamp-5 mb-3">{account.description}</p>

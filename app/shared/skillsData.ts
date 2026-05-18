@@ -18,6 +18,7 @@ export const skillsDataObj = [
     { dark: "/prometheus.svg", name: "Prometheus", src: "/prometheus.svg", category: "ai-mlops" },
     { dark: "/darkAWS.svg", name: "AWS", src: "/aws.svg", category: "ai-mlops" },
     { dark: "/python.svg", name: "Python", src: "/python.svg", category: "programming" },
+    { dark: "/typescript.svg", name: "TypeScript", src: "/typescript.svg", category: "programming" },
     { dark: "/javascript.svg", name: "JavaScript", src: "/javascript.svg", category: "programming" },
     { dark: "/git.svg", name: "Git", src: "/git.svg", category: "tools" },
     { dark: "/ubuntu.svg", name: "Linux", src: "/ubuntu.svg", category: "tools" },

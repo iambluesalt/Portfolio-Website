@@ -3,45 +3,34 @@ import Transition from "~/components/transition";
 import { SectionHeading } from "~/components/SectionHeading";
 import { AchievementsSection } from "~/components/AchievementsSection";
 import { SectionDivider } from "~/components/SectionDivider";
+import { WorkExperience } from "~/components/WorkExperience";
 
 function CodeLifeBlock() {
-  const code = `// Disclaimer: May contain traces of caffeine and questionable hacks
+  const code = `// about.life.ts
 
-const profile = {
-  title: "Generative AI Developer",
-  techStack: [
-    "Python", "JavaScript/TypeScript", "ReactJS", "RemixJS", "TailwindCSS",
-    "PostgreSQL", "MongoDB", "Prisma", "FastAPI", "Django",
-    "LangChain", "Qdrant", "MLflow", "Docker", "Jenkins", "GitLab", 
-    "AWS", "Prometheus", "Grafana"
-  ],
-  skills: [
-    "Machine Learning", "Deep Learning", "Computer Vision", "NLP",
-    "Data Analysis & Visualization", "Statistical Modeling",
-    "Prompt Engineering", "CI/CD (Commit → Pray → Deploy)"
-  ],
-  experience: ["Shhhh...it's a secret"],
-  education: [
-    "PGP in Data Science & Analytics (Imarticus, Pune, 2023–24)",
-    "BBA Computer Application (Pune University, 2020–23, CGPA 8.61)",
-    "Senior Secondary – 55.69%", 
-    "High School – 69%"
-  ],
-  languages: [
-    "English (Proficient)", 
-    "Hindi & Marathi (Native)", 
-    "German & Japanese (Novice – Duolingo battles ongoing)"
-  ],
-  fun: [
-    "Chess flexer (ranked 1st twice)", 
-    "Sketching human anatomy", 
-    "Making ambient/lofi music",
-    "Gaming (Valorant main, still silver)", 
-    "Breaking things just to fix them cleaner"
-  ]
-};
+UncaughtLifeException: direction not found
+  at School.high_school  (nigdi.ts:2018)  // 69% — nice, at least
+  at School.secondary    (pune.ts:2020)   // 55.69% — we don't talk about this
+  at School.bca          (pune.ts:2023)   // 8.61 CGPA — redemption arc
+  at School.pgp          (pune.ts:2024)   // Data Science — self-inflicted
+  at Career.intern       (nsarrows.ts:1)  // automated 40% of own work
+  at Career.engineer     (wipro.ts:3)     // reduced MTTR 25%, no cake
 
-export default profile;`;
+stack: [
+  "Python", "TypeScript", "Go", "SQL",
+  "React 19", "Next.js 15", "Remix", "FastAPI",
+  "LangChain", "LangGraph", "Qdrant", "Ollama",
+  "Docker", "AWS", "PostgreSQL", "Redis",
+]
+
+misc: {
+  chess  : "ranked 1st. twice. not keeping score.",
+  music  : "lo-fi & orchestral — for 2am decisions",
+  gaming : "Valorant Silver — consistent, at peace",
+  lang   : "EN · HI · MR · DE (theoretical) · JP (aspirational)",
+}
+
+process.on('exit', () => { /* TODO: figure this out */ });`;
 
   return (
   <div className="relative w-full rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/60 dark:bg-zinc-900/40 overflow-hidden shadow-md ring-1 ring-black/5 dark:ring-white/5">
@@ -73,10 +62,10 @@ export default function AboutRoute() {
             <div className="space-y-8 text-[13px] md:text-[15px] text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
               <SectionHeading>About Me</SectionHeading>
               <p className="mb-4 first-letter:text-2xl">
-                Born in Mumbai in 2002, I migrated to Pune in 2006 and have been here ever since, collecting life experiences, bad report cards, and eventually some good ones. High school? <span className="font-semibold text-emerald-400">69%</span> (heh… nice). Secondary high school? <span className="font-semibold text-emerald-400">55.69%</span> (not my proudest, but hey, character development arc). I made up for it in my BCA degree with an <span className="font-semibold text-emerald-400">8.68 CGPA</span> and a couple of chess tournament wins for extra bragging rights. To top it off, I completed a Post-Graduation in Data Science & Analytics, because apparently I enjoy a good academic challenge (and by “challenge” I mean “self-inflicted pain”).
+                Born in Mumbai in 2002, I migrated to Pune in 2006 and have been here ever since, collecting life experiences, bad report cards, and eventually some good ones. High school? <span className="font-semibold text-emerald-400">69%</span> (heh… nice). Secondary high school? <span className="font-semibold text-emerald-400">55.69%</span> (not my proudest, but hey, character development arc). I made up for it in my BCA degree with an <span className="font-semibold text-emerald-400">8.61 CGPA</span> and a couple of chess tournament wins for extra bragging rights. To top it off, I completed a Post-Graduation in Data Science & Analytics, because apparently I enjoy a good academic challenge (and by “challenge” I mean “self-inflicted pain”).
               </p>
               <p className="mb-4 indent-6">
-                Ironically, I wasn’t even into coding at first. The turning point came when people around me, especially my brother, wouldn’t shut up about how I should “just give it a try.” One thing led to another, and suddenly I was neck-deep in <span className="font-semibold text-emerald-400">Machine Learning</span>, <span className="font-semibold text-emerald-400">Deep Learning</span>, <span className="font-semibold text-emerald-400">Computer Vision</span>, and building SaaS applications. Now my toolkit is a mix of <span className="font-semibold text-emerald-400">React</span>, <span className="font-semibold text-emerald-400">Remix</span>, <span className="font-semibold text-emerald-400">Tailwind</span>, <span className="font-semibold text-emerald-400">FastAPI</span>, <span className="font-semibold text-emerald-400">Docker</span>, <span className="font-semibold text-emerald-400">AWS</span>, <span className="font-semibold text-emerald-400">LangChain</span>, <span className="font-semibold text-emerald-400">Qdrant</span>, and whatever other shiny tech I can get my hands on.
+                Ironically, I wasn’t even into coding at first. The turning point came when people around me, especially my brother, wouldn’t shut up about how I should “just give it a try.” One thing led to another, and suddenly I was neck-deep in <span className="font-semibold text-emerald-400">Machine Learning</span>, <span className="font-semibold text-emerald-400">Deep Learning</span>, <span className="font-semibold text-emerald-400">Computer Vision</span>, and building SaaS applications. Now my toolkit spans <span className="font-semibold text-emerald-400">React 19</span>, <span className="font-semibold text-emerald-400">Next.js 15</span>, <span className="font-semibold text-emerald-400">Remix</span>, <span className="font-semibold text-emerald-400">FastAPI</span>, <span className="font-semibold text-emerald-400">Go</span>, <span className="font-semibold text-emerald-400">Docker</span>, <span className="font-semibold text-emerald-400">AWS</span>, <span className="font-semibold text-emerald-400">LangChain</span>, <span className="font-semibold text-emerald-400">LangGraph</span>, <span className="font-semibold text-emerald-400">Qdrant</span>, and whatever shiny thing I picked up last week.
               </p>
               <p className="mb-4 indent-6">
                 When I’m not wrestling with code, I’m usually playing <span className="font-semibold text-emerald-400">chess</span> like it’s a competitive sport, sketching <span className="font-semibold text-emerald-400">human anatomy</span> to stay sharp, layering <span className="font-semibold text-emerald-400">ambient/lo-fi music</span> for focus, or <span className="font-semibold text-emerald-400">gaming</span> until my eyes beg for mercy. Somehow, no matter what I do, I end up circling back to building or improving something, because even my “breaks” end up turning into side projects.
@@ -84,6 +73,10 @@ export default function AboutRoute() {
             </div>
             <CodeLifeBlock />
           </section>
+
+          <SectionDivider label="Life Experience" />
+
+          <WorkExperience />
 
           <SectionDivider label="Milestones" />
 

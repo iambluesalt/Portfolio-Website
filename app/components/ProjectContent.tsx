@@ -69,7 +69,7 @@ export default function ProjectsDisplay() {
           {/* Projects Display */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 relative mt-5">
             {regularFilteredProjects.map((project, index) => (
-              <Link to={project.link.playStore || project.link.github || "#"} target="blank" key={index} className={`${projectContainerStyle} relative`}>
+              <Link to={project.link.live || project.link.playStore || project.link.github || "#"} target="blank" key={index} className={`${projectContainerStyle} relative`}>
                 {/* Live Indicator */}
                 {project.isLive && (
                   <span className="absolute -top-1 -right-0 flex h-3 w-3 z-10">

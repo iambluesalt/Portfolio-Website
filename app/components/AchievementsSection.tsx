@@ -14,9 +14,9 @@ const achievements: { icon?: JSX.Element; title: string; description: string; me
   },
   {
     icon: <TbSparkles className="text-emerald-500 h-7 w-7" />,
-    title: "Here lies void, my life",
-    description: "Navigating the chaotic landscape of modern life, one breakdown at a time.",
-    meta: "2002–Present"
+    title: "Seeding — Live on Play Store",
+    description: "Shipped a full React Native habit tracker to production, solo — from idea to Play Store listing. Real users, real streaks, no teammates to blame.",
+    meta: "Published 2024"
   },
   {
     icon: <TbCertificate className="text-cyan-500 h-7 w-7" />,
