@@ -1,10 +1,10 @@
 // ...existing code...
 import type { MetaFunction } from "@remix-run/node";
-import ContactComponent from "~/components/ContactForm";
 import Hero from "~/components/Hero";
 import MiniHobbies from "~/components/miniHobbies";
 import MiniProjects from "~/components/miniProjects";
 import MiniSkills from "~/components/miniSkills";
+import RandomFacts from "~/components/RandomFacts";
 import Transition from "~/components/transition";
 import { SectionDivider } from "~/components/SectionDivider";
 import LegendaryProjectCard from "~/components/LegendaryProjectCard";
@@ -46,9 +46,9 @@ export default function Index() {
             <MiniHobbies />
           </section>
 
-          <SectionDivider label="Contact? Hell naw" />
+          <SectionDivider label="Random Fact Generator" />
           <section className="space-y-8">
-            <ContactComponent />
+            <RandomFacts />
           </section>
         </main>
       </Transition>
